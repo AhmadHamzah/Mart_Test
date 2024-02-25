@@ -34,11 +34,11 @@ body {
 .card-container {
     background-color: #FFFFFF;
 
-    height: 170px;
+    height: 180px;
     text-align: right;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card-container img {
@@ -63,7 +63,7 @@ body {
 
 .card-container p {
     padding: 0 5px;
-    margin-top: 25px;
+    margin-top: 28px;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
