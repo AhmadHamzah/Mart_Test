@@ -13,6 +13,7 @@ body {
     text-align: right;
     font-size: 20px;
     padding: 20px 20px;
+    background: #FFF;
 }
 
 .page-container {
@@ -27,14 +28,13 @@ body {
 
 .grid-container a {
     text-decoration: none;
-    width: 47%;
-    color: black;
+    width: 48%;
+    color: #000;
 }
 
 .card-container {
     background-color: #FFFFFF;
-
-    height: 180px;
+    height: 185px;
     text-align: right;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px;
@@ -63,7 +63,7 @@ body {
 
 .card-container p {
     padding: 0 5px;
-    margin-top: 28px;
+    margin-top: 32px;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
