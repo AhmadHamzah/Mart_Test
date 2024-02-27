@@ -12,9 +12,27 @@ body {
 .page-header {
     text-align: right;
     font-size: 20px;
+    font-weight: 500;
     padding: 8px 16px;
     background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
 }
+
+.page-header img {
+    width: 5%;
+    display: inline-block;
+}
+
+.page-header h1 {
+    font-size: 18px;
+    font-weight: 500;    
+    margin-right: 5px;
+    padding-top: 3px;
+}
+
 
 .page-container {
     padding: 10px 20px;
@@ -28,43 +46,48 @@ body {
 
 .grid-container a {
     text-decoration: none;
-    width: 48%;
+    width: calc(50% - 5px);
     color: #000;
 }
 
 .card-container {
     background-color: #FFFFFF;
-    height: 195px;
     text-align: right;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px;
     margin-bottom: 13px;
+    overflow: hidden;
 }
 
 .card-container img {
-    height: 100px;
-    max-width: 100%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    min-height: 100px;
+    width: 100%;
 }
 
 .card-container h2 {
     padding: 0 5px;
-    margin-top: 7px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    line-height: 10px;
+    line-height: 1.5;
+    margin-top: 30px;
+
     color: #707070;
+    display: inline-block;
 }
 
-.card-container h2 .date {
+.card-container .date {
     color: #000;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.card-container .description {
+    display: inline-block;
 }
 
 .card-container p {
+    margin-bottom: 5px;
     padding: 0 5px;
-    margin-top: 32px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.5;
 }
