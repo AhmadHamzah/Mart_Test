@@ -2,120 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-    <title>Document</title>
+  <title>Document</title>
+
+  <script>
+    $(document).ready(function () {
+      $(".slider").bxSlider({
+        controls: false // This hides the forward and back controls
+      });
+    });
+  </script>
+
 </head>
 
 <body>
 
-    <header class="page-header"><h1>حملات مارت</h1><img src="imgs/Icon.svg" alt=""></header>
-   
+  <div class="slider">
 
-    <main class="page-container">
-        <div class="grid-container">
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/one.png" alt="">
-              <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p> 
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/five.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض  Reebok أسعار أقل من 10 شيكلReebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/two.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>  أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/five.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/four.jpeg" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/three.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/one.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/five.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/two.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/five.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/four.jpeg" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-container">
-                    <img src="imgs/three.png" alt="">
-                    <span class="date">10/3/2023</span> <p class="description"> ينتهي العرض</p>
-                    <h2>عروض Reebok أسعار أقل من 10 شيكل</h2>
-                </div>
-            </a>
-
+    <div class="slide slide1">
+        <div class="item">
+          <img src="imgs/one.png" alt="Image 1">
+          <div class="title">ألعاب</div>
         </div>
 
-    </main>
+        <div class="item">
+          <img src="imgs/two.png" alt="Image 2">
+          <div class="title">شنط</div>
+        </div>
+ 
+        <div class="item">
+          <img src="imgs/three.png" alt="Image 3">
+          <div class="title">مطبخ</div>
+        </div>
 
+        <div class="item">
+          <img src="imgs/four.png" alt="Image 4">
+          <div class="title">أحذية</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/five.png" alt="Image 5">
+          <div class="title">التكرونيات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/six.png" alt="Image 6">
+          <div class="title">ساعات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/seven.png" alt="Image 7">
+          <div class="title">ملابس</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/eight.png" alt="Image 8">
+          <div class="title">مجوهرات</div>
+        </div>
+      </div>
+
+      <div class="slide slide2">
+        <div class="item">
+          <img src="imgs/one.png" alt="Image 1">
+          <div class="title">ألعاب</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/two.png" alt="Image 2">
+          <div class="title">شنط</div>
+        </div>
+ 
+        <div class="item">
+          <img src="imgs/three.png" alt="Image 3">
+          <div class="title">مطبخ</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/four.png" alt="Image 4">
+          <div class="title">أحذية</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/five.png" alt="Image 5">
+          <div class="title">التكرونيات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/six.png" alt="Image 6">
+          <div class="title">ساعات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/seven.png" alt="Image 7">
+          <div class="title">ملابس</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/eight.png" alt="Image 8">
+          <div class="title">مجوهرات</div>
+        </div>
+      </div>
+
+  </div>
 
 </body>
 
