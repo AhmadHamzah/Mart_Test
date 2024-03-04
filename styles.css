@@ -6,12 +6,13 @@
 }
 
 .slider {
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 img {
     width: 80%;
     border-radius: 50%;
+    display: inline !important; 
 }
 
 .item {
