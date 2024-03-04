@@ -30,3 +30,26 @@ img {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+border-radius: 0px !important;
+width: 20px !important;
+height: 7px !important;
+}
+
+.bx-wrapper .bx-pager-item {
+width: 19px !important;
+}
+
+.bx-wrapper .bx-pager {
+    color: #b0b0b0 !important;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #444 !important;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #b0b0b0 !important;
+}
