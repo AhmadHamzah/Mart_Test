@@ -9,10 +9,10 @@
     /* margin-top: 40px; */
 }
 
-img {
+.slider img {
     width: 80%;
     border-radius: 50%;
-    display: inline !important; 
+    display: inline !important;
 }
 
 .item {
@@ -26,7 +26,7 @@ img {
     text-align: center;
 }
 
-.slide { 
+.slide {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -34,23 +34,89 @@ img {
 
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-border-radius: 0px !important;
-width: 20px !important;
-height: 7px !important;
+    border-radius: 0px !important;
+    width: 20px !important;
+    height: 7px !important;
 }
 
 .bx-wrapper .bx-pager-item {
-width: 19px !important;
+    width: 19px !important;
 }
 
 .bx-wrapper .bx-pager {
     color: #b0b0b0 !important;
 }
 
-.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #444 !important;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
     background: #b0b0b0 !important;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.grid .grid-item {
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+.grid .grid-item-title {
+    text-align: right;
+    width: 75%;
+    color: #111;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.grid-caption-container {
+    display: flex;
+}
+
+
+.arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.arrow:after {
+    position: absolute;
+    display: block;
+    content: "";
+    color: #111;
+    width: 30px;
+    height: 15px;
+    top: -1px;
+    border-bottom: solid 2px;
+    transform: translatex(4px);
+}
+
+.arrow:before {
+    position: absolute;
+    display: block;
+    content: "";
+    color: #111;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px;
+    border-left: solid 2px;
+    top: 50%;
+    left: 2px;
+    transform-origin: 0% 0%;
+    transform: rotatez(-45deg);
+
 }
