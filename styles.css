@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.slider1 .bx-controls {
+.cover-images-slider .bx-controls {
 position: absolute !important;
     bottom: 40px !important;
     left: 0 !important;
@@ -19,6 +19,52 @@ position: absolute !important;
     margin-right: auto !important;
     width: 100px !important;
 }
+
+.categories-slider .bx-wrapper {
+
+}
+
+
+.cover-images-slider .bx-wrapper .bx-pager.bx-default-pager a {
+    border-radius: 0 !important;
+    width: 20px !important;
+    height: 7px !important;
+
+
+}
+.cover-images-slider .bx-wrapper .bx-pager-item {
+    width: 19px !important;
+}
+
+
+/* .cover-images-slider .bx-wrapper .bx-pager-item {
+    width: 19px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    }
+
+.cover-images-slider .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.cover-images-slider .bx-wrapper .bx-pager.bx-default-pager a.active,
+.cover-images-slider .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #fff !important;
+    width: 22px !important;
+    margin: 0 5px !important;
+}
+
+.cover-images-slider .bx-wrapper .bx-pager {
+} */
+
+/* 
+.categories-slider .bx-wrapper .bx-pager {
+    color: #b0b0b0 !important;
+}
+
+
+
+.categories-slider .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #b0b0b0 !important;
+} */
 
 
 
@@ -44,30 +90,34 @@ position: absolute !important;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.categories-slider {
+    margin-top: -50px;
+}
+.categories-slider .bx-wrapper {
+    border: 0 !important;
+}
 
-
-
- .bx-wrapper .bx-pager.bx-default-pager a {
+.categories-slider .bx-wrapper .bx-pager.bx-default-pager a {
     border-radius: 0px !important;
     width: 20px !important;
     height: 7px !important;
 }
 
-.bx-wrapper .bx-pager-item {
+.categories-slider .bx-wrapper .bx-pager-item {
     width: 19px !important;
 }
 
-.bx-wrapper .bx-pager {
+.categories-slider .bx-wrapper .bx-pager {
     color: #b0b0b0 !important;
 }
 
-.bx-wrapper .bx-pager.bx-default-pager a:hover,
-.bx-wrapper .bx-pager.bx-default-pager a.active,
-.bx-wrapper .bx-pager.bx-default-pager a:focus {
+.categories-slider .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.categories-slider .bx-wrapper .bx-pager.bx-default-pager a.active,
+.categories-slider .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #444 !important;
 }
 
-.bx-wrapper .bx-pager.bx-default-pager a {
+.categories-slider .bx-wrapper .bx-pager.bx-default-pager a {
     background: #b0b0b0 !important;
 }
 
