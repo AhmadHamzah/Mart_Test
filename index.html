@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link href="https://db.onlinewebfonts.com/c/cc7646983aa73bfa5f96086eb19068a8?family=Talis+Heavy+W00+Heavy"
+    rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
@@ -29,145 +31,203 @@
 
 <body>
 
-  <div  class="cover-images-slider">
-  <div class="slider slider1">
-    <img src="./imgs/cover-image.jpeg" alt="">
-    <img src="./imgs/cover-image.jpeg" alt="">
-    <img src="./imgs/cover-image.jpeg" alt="">
-    <img src="./imgs/cover-image.jpeg" alt="">
+  <div class="navigation-bar">
+    <div class="frame bottom-nav-home active">
+      <div class="img-wrapper">
+      <img class="img true-icon active-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/home-true.svg">
+      </div>
+      <div class="text-wrapper">الرئيسية</div>
+      <div class="rectangle" style="display: block;"></div>
+    </div>
+    <div class="frame bottom-nav-categories sidebar-toggle" sidebarid="SideListMenu">
+      <div class="img-wrapper">
+      <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/categories-false.svg">
+      </div>
+      <div class="text-wrapper">الأقسام</div>
+      <div class="rectangle" style="display: none;"></div>
+    </div>
+    <div class="frame bottom-nav-new-products" onclick="window.open('https://mart.ps/new-products','_blank')">
+    <div class="img-wrapper">
+    <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/new-false.svg">
+    </div>
+      <div class="text-wrapper">جديدنا</div>
+      <div class="rectangle" style="display: none;"></div>
+    </div>
+    <div class="frame bottom-nav-cart" onclick="window.open('https://mart.ps/quick-order','_blank')">
+      <div class="img-wrapper">
+      <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/cart-false.svg">
+   
+      </div>
+      <div class="text-wrapper">السلة</div>
+      <div class="rectangle" style="display: none;"></div>
+    </div>
+    
+    <div class="frame bottom-nav-myaccount sidebar-toggle" sidebarid="accountsidebar">
+      <div class="img-wrapper">
+      <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/user-false.svg">
+      </div>
+      <div class="text-wrapper">حسابي</div>
+      <div class="rectangle" style="display: none;"></div>
+    </div>
+    </div>
+
+
+  <header class="page-header">
+    <h1>Mart.Ps</h1>
+    <div class="search-bar-container">
+      <img class="icon" src="./imgs/icon.png" alt="">
+
+      <div class="search-bar">
+        <div class="search-field">بحث</div>
+        <img class="search-icon" src="./imgs/search-icon.png" alt="">
+      </div>
+    </div>
+
+    <img class="heart-icon" src="./imgs/heart-icon.png" alt="">
+
+  </header>
+
+
+
+  <div class="cover-images-slider">
+    <div class="slider slider1">
+      <img src="./imgs/cover-image.jpeg" alt="">
+      <img src="./imgs/cover-image.jpeg" alt="">
+      <img src="./imgs/cover-image.jpeg" alt="">
+      <img src="./imgs/cover-image.jpeg" alt="">
+    </div>
   </div>
-</div>
 
-<div  class="categories-slider">
-  <div class="slider slider2">
+  <div class="categories-slider">
+    <div class="slider slider2">
 
-    <div class="slide slide1">
-      <div class="item">
-        <img src="imgs/one.png" alt="Image 1">
-        <div class="title">ألعاب</div>
+      <div class="slide slide1">
+        <div class="item">
+          <img src="imgs/one.png" alt="Image 1">
+          <div class="title">ألعاب</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/two.png" alt="Image 2">
+          <div class="title">شنط</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/three.png" alt="Image 3">
+          <div class="title">مطبخ</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/four.png" alt="Image 4">
+          <div class="title">أحذية</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/five.png" alt="Image 5">
+          <div class="title">التكرونيات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/six.png" alt="Image 6">
+          <div class="title">ساعات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/seven.png" alt="Image 7">
+          <div class="title">ملابس</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/eight.png" alt="Image 8">
+          <div class="title">مجوهرات</div>
+        </div>
       </div>
 
-      <div class="item">
-        <img src="imgs/two.png" alt="Image 2">
-        <div class="title">شنط</div>
+      <div class="slide slide2">
+        <div class="item">
+          <img src="imgs/one.png" alt="Image 1">
+          <div class="title">ألعاب</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/two.png" alt="Image 2">
+          <div class="title">شنط</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/three.png" alt="Image 3">
+          <div class="title">مطبخ</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/four.png" alt="Image 4">
+          <div class="title">أحذية</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/five.png" alt="Image 5">
+          <div class="title">التكرونيات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/six.png" alt="Image 6">
+          <div class="title">ساعات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/seven.png" alt="Image 7">
+          <div class="title">ملابس</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/eight.png" alt="Image 8">
+          <div class="title">مجوهرات</div>
+        </div>
       </div>
 
-      <div class="item">
-        <img src="imgs/three.png" alt="Image 3">
-        <div class="title">مطبخ</div>
+      <div class="slide slide3">
+        <div class="item">
+          <img src="imgs/one.png" alt="Image 1">
+          <div class="title">ألعاب</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/two.png" alt="Image 2">
+          <div class="title">شنط</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/three.png" alt="Image 3">
+          <div class="title">مطبخ</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/four.png" alt="Image 4">
+          <div class="title">أحذية</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/five.png" alt="Image 5">
+          <div class="title">التكرونيات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/six.png" alt="Image 6">
+          <div class="title">ساعات</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/seven.png" alt="Image 7">
+          <div class="title">ملابس</div>
+        </div>
+
+        <div class="item">
+          <img src="imgs/eight.png" alt="Image 8">
+          <div class="title">مجوهرات</div>
+        </div>
       </div>
 
-      <div class="item">
-        <img src="imgs/four.png" alt="Image 4">
-        <div class="title">أحذية</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/five.png" alt="Image 5">
-        <div class="title">التكرونيات</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/six.png" alt="Image 6">
-        <div class="title">ساعات</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/seven.png" alt="Image 7">
-        <div class="title">ملابس</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/eight.png" alt="Image 8">
-        <div class="title">مجوهرات</div>
-      </div>
     </div>
-
-    <div class="slide slide2">
-      <div class="item">
-        <img src="imgs/one.png" alt="Image 1">
-        <div class="title">ألعاب</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/two.png" alt="Image 2">
-        <div class="title">شنط</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/three.png" alt="Image 3">
-        <div class="title">مطبخ</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/four.png" alt="Image 4">
-        <div class="title">أحذية</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/five.png" alt="Image 5">
-        <div class="title">التكرونيات</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/six.png" alt="Image 6">
-        <div class="title">ساعات</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/seven.png" alt="Image 7">
-        <div class="title">ملابس</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/eight.png" alt="Image 8">
-        <div class="title">مجوهرات</div>
-      </div>
-    </div>
-
-    <div class="slide slide3">
-      <div class="item">
-        <img src="imgs/one.png" alt="Image 1">
-        <div class="title">ألعاب</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/two.png" alt="Image 2">
-        <div class="title">شنط</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/three.png" alt="Image 3">
-        <div class="title">مطبخ</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/four.png" alt="Image 4">
-        <div class="title">أحذية</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/five.png" alt="Image 5">
-        <div class="title">التكرونيات</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/six.png" alt="Image 6">
-        <div class="title">ساعات</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/seven.png" alt="Image 7">
-        <div class="title">ملابس</div>
-      </div>
-
-      <div class="item">
-        <img src="imgs/eight.png" alt="Image 8">
-        <div class="title">مجوهرات</div>
-      </div>
-    </div>
-
-  </div>
 
   </div>
 
@@ -232,7 +292,7 @@
       </div>
 
     </div>
-  
+
   </div>
 
 </body>

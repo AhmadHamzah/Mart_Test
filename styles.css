@@ -1,9 +1,71 @@
+@font-face {
+    font-family: "Talis Heavy W00 Heavy";
+    src: url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.eot");
+    src: url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.svg#Talis Heavy W00 Heavy")format("svg");
+}
+
 * {
     font-family: "Tajawal", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.page-header {
+    font-family: "Talis Heavy W00 Heavy";
+    color: #ED2D37;
+    font-size: 13px;
+    display: flex;
+    margin-bottom: 5px;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 0 10px;
+}
+.search-bar {
+    display: flex;
+}
+.page-header .search-field {
+    color: #88888C;
+}
+
+.page-header .search-field {
+    font-size: 17px;
+    margin-right: 3px;   
+}
+
+
+.page-header .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.page-header .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.page-header .search-icon {
+    width: 20px;
+    height: 25px;
+}
+
+.page-header .heart-icon {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+
 
 .slider {
     /* margin-top: 40px; */
@@ -219,13 +281,15 @@ position: absolute !important;
 }
 
 .brand-container {
-    flex: 0 0 auto;
-    width: 27%; 
+    /* flex: 0 0 auto;
+    /* width: 27%;  */
     position: relative;
     margin-right: 3%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
 }
 
 .brand-container .brand-image{
@@ -233,14 +297,56 @@ position: absolute !important;
     height: 25px;
  }
 
+
  .brand-container .example-image{
-    width: 100%;
+    /* width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -1; */
  }
 
 .brands-slider::-webkit-scrollbar {
     display: none;
-  }
+}
+
+.navigation-bar {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px;
+    position: fixed;
+    bottom: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #888;
+    background: #fff;
+    z-index: 999998;
+}
+
+.navigation-bar .frame {
+    display: flex;
+    flex-direction: column;
+    width: 54px;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+    margin-top: -6px;
+    margin-bottom: -6px;
+}
+
+.navigation-bar .text-wrapper {
+    position: relative;
+    /* width: fit-content; */
+    font-family: "Tajawal", Helvetica;
+    font-weight: 500;
+    color: var(--collection-1-secondary-grey);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+    direction: rtl;
+}
