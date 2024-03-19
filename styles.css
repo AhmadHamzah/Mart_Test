@@ -285,8 +285,8 @@ position: absolute !important;
 }
 
 .brand-container {
-    /* flex: 0 0 auto;
-    /* width: 27%;  */
+    flex: 0 0 auto; 
+    width: 27%;  
     position: relative;
     margin-right: 3%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
