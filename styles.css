@@ -24,7 +24,10 @@
     padding: 5px 15px;
     font-weight: bold;
 }
+.page-header h1 {
+padding-top: 5px;
 
+}
 .search-bar-container {
     display: flex;
     justify-content: space-between;
@@ -42,6 +45,7 @@
 .page-header .search-field {
     font-size: 17px;
     margin-right: 3px;   
+    padding-top: 3px;
 }
 
 
