@@ -31,7 +31,7 @@
 
 <body>
 
-  <div class="navigation-bar">
+   <div class="navigation-bar">
     <div class="frame bottom-nav-home active">
       <div class="img-wrapper">
       <img class="img true-icon active-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/home-true.svg">
@@ -86,8 +86,6 @@
     <img class="heart-icon" src="./imgs/heart-icon.png" alt="">
 
   </header>
-
-
 
   <div class="cover-images-slider">
     <div class="slider slider1">
@@ -304,9 +302,36 @@
 
 
     </div>
+  </div>
 
+  <div class="products-container">
+    <div class="categories-bar">
+      <div class="category category-selected">اخترنا لك</div>
+      <div class="category">تصفية مارت</div>
+      <div class="category">ماركات</div>
+      <div class="category">الأكثر مبيعا</div>
+      <div class="category">جديد</div>
+    </div>
   </div>
 
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+  const categories = document.querySelectorAll('.categories-bar .category');
+
+  categories.forEach(category => {
+    category.addEventListener('click', function() {
+      // Remove .category-selected from all categories
+      categories.forEach(cat => {
+        cat.classList.remove('category-selected');
+      });
+
+      // Add .category-selected to the clicked category
+      this.classList.add('category-selected');
+    });
+  });
+});
+</script>
 
 </html>

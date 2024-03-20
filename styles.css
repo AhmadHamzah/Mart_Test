@@ -15,6 +15,8 @@
     box-sizing: border-box;
 }
 
+
+
 .page-header {
     font-family: "Talis Heavy W00 Heavy";
     color: #ED2D37;
@@ -353,4 +355,44 @@ position: absolute !important;
     line-height: 24px;
     white-space: nowrap;
     direction: rtl;
+}
+
+.products-container {
+    margin-top: 5px;
+    padding: 0 5px;
+}
+.categories-bar{
+    display: flex;
+
+    color: #999;
+    padding-bottom: 70px;
+
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+
+}
+
+.categories-bar .category{
+    transition: background-color 0.5s ease, color 0.5s ease; /* Add transitions for the properties you
+
+    width: auto; /* remove any fixed width */
+  max-width: none; /* remove any max-width restrictions */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 12px;
+}
+
+.categories-bar .category-selected{
+    background-color: #ED2D37;
+    color: #fff;
+    
 }
