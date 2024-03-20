@@ -358,17 +358,18 @@ position: absolute !important;
 }
 
 .products-container {
-    margin-top: 5px;
+    margin-top: 10px;
     padding-right: 5px;
     padding-left: 5px;
     padding-bottom: 300px;
 
 }
 .categories-bar{
+    margin-bottom: -7px;
+
     display: flex;
 
     color: #999;
-    padding-bottom: 5px;
 
     flex-wrap: nowrap;
     overflow-x: auto; /* Enable horizontal scrolling */
