@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -74,10 +74,21 @@
 
   <div class="swiper cover-images-slider">
     <div class="swiper-wrapper">
-        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
-        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
-        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
-        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
+      <div class="swiper-slide">
+      <div class="swiper-zoom-container">
+        <img src="./imgs/cover-image.jpeg" alt="">
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-zoom-container">
+        <img src="./imgs/cover-image.jpeg" alt="">
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-zoom-container">
+        <img src="./imgs/cover-image.jpeg" alt="">
+      </div>
+    </div>
     </div>
     <div class="swiper-pagination"></div>
 
@@ -212,7 +223,7 @@
           <div class="title">مجوهرات</div>
         </div>
       </div>
-      
+
 
     </div>
     <div class="swiper-pagination"></div>
@@ -443,30 +454,31 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- Initialize Swiper -->
-<script>
-  var swiper = new Swiper(".cover-images-slider", {
-    loop: true,
-    autoplay: {
-      delay: 2000, // Slide changes every 2 seconds
-      disableOnInteraction: false, // Continue autoplay on interaction
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".cover-images-slider", {
+      loop: true,
+      autoplay: {
+        delay: 2000, // Slide changes every 2 seconds
+        disableOnInteraction: false, // Continue autoplay on interaction
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
 
-  var swiper = new Swiper(".categories-slider", {
-    loop: true,
-    autoplay: {
-      delay: 2000, // Slide changes every 2 seconds
-      disableOnInteraction: false, // Continue autoplay on interaction
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
-</script>
+    var swiper = new Swiper(".categories-slider", {
+      loop: true,
+      zoom: true,
+      autoplay: {
+        delay: 2000, // Slide changes every 2 seconds
+        disableOnInteraction: false, // Continue autoplay on interaction
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 
 </body>
 
