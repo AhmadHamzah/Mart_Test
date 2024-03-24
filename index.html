@@ -9,68 +9,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <link href="https://db.onlinewebfonts.com/c/cc7646983aa73bfa5f96086eb19068a8?family=Talis+Heavy+W00+Heavy"
-    rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-  <title>Document</title>
-
-  <script>
-    $(document).ready(function () {
-      $(".slider").bxSlider({
-        controls: false,
-        adaptiveHeight: true
-
-      });
-    });
-  </script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
 
-   <div class="navigation-bar">
+
+  <div class="navigation-bar">
     <div class="frame bottom-nav-home active">
       <div class="img-wrapper">
-      <img class="img true-icon active-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/home-true.svg">
+        <img class="img true-icon active-icon"
+          src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/home-true.svg">
       </div>
       <div class="text-wrapper">الرئيسية</div>
       <div class="rectangle" style="display: block;"></div>
     </div>
     <div class="frame bottom-nav-categories sidebar-toggle" sidebarid="SideListMenu">
       <div class="img-wrapper">
-      <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/categories-false.svg">
+        <img class="img false-icon"
+          src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/categories-false.svg">
       </div>
       <div class="text-wrapper">الأقسام</div>
       <div class="rectangle" style="display: none;"></div>
     </div>
     <div class="frame bottom-nav-new-products" onclick="window.open('https://mart.ps/new-products','_blank')">
-    <div class="img-wrapper">
-    <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/new-false.svg">
-    </div>
+      <div class="img-wrapper">
+        <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/new-false.svg">
+      </div>
       <div class="text-wrapper">جديدنا</div>
       <div class="rectangle" style="display: none;"></div>
     </div>
     <div class="frame bottom-nav-cart" onclick="window.open('https://mart.ps/quick-order','_blank')">
       <div class="img-wrapper">
-      <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/cart-false.svg">
-   
+        <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/cart-false.svg">
+
       </div>
       <div class="text-wrapper">السلة</div>
       <div class="rectangle" style="display: none;"></div>
     </div>
-    
+
     <div class="frame bottom-nav-myaccount sidebar-toggle" sidebarid="accountsidebar">
       <div class="img-wrapper">
-      <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/user-false.svg">
+        <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/user-false.svg">
       </div>
       <div class="text-wrapper">حسابي</div>
       <div class="rectangle" style="display: none;"></div>
     </div>
-    </div>
-
+  </div>
 
   <header class="page-header">
     <h1>Mart.Ps</h1>
@@ -87,19 +72,22 @@
 
   </header>
 
-  <div class="cover-images-slider">
-    <div class="slider slider1">
-      <img src="./imgs/cover-image.jpeg" alt="">
-      <img src="./imgs/cover-image.jpeg" alt="">
-      <img src="./imgs/cover-image.jpeg" alt="">
-      <img src="./imgs/cover-image.jpeg" alt="">
+  <div class="swiper cover-images-slider">
+    <div class="swiper-wrapper">
+        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
+        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
+        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
+        <img class="swiper-slide" src="./imgs/cover-image.jpeg" alt="">
     </div>
+    <div class="swiper-pagination"></div>
+
   </div>
 
-  <div class="categories-slider">
-    <div class="slider slider2">
 
-      <div class="slide slide1">
+  <div class="swiper categories-slider">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
         <div class="item">
           <img src="imgs/one.png" alt="Image 1">
           <div class="title">ألعاب</div>
@@ -141,7 +129,7 @@
         </div>
       </div>
 
-      <div class="slide slide2">
+      <div class="swiper-slide">
         <div class="item">
           <img src="imgs/one.png" alt="Image 1">
           <div class="title">ألعاب</div>
@@ -183,7 +171,7 @@
         </div>
       </div>
 
-      <div class="slide slide3">
+      <div class="swiper-slide">
         <div class="item">
           <img src="imgs/one.png" alt="Image 1">
           <div class="title">ألعاب</div>
@@ -224,8 +212,11 @@
           <div class="title">مجوهرات</div>
         </div>
       </div>
+      
 
     </div>
+    <div class="swiper-pagination"></div>
+
 
   </div>
 
@@ -338,7 +329,7 @@
           <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
         </div>
       </div>
-      
+
 
     </section>
 
@@ -367,7 +358,7 @@
           <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
         </div>
       </div>
-      
+
 
     </section>
 
@@ -396,7 +387,7 @@
           <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
         </div>
       </div>
-      
+
 
     </section>
 
@@ -425,30 +416,80 @@
           <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
         </div>
       </div>
-      
+
 
     </section>
 
   </div>
 
+  <div class="special-slider-container">
+    <div class="special-slider-card-container">
+      <img class="speical-slider-img" src="./imgs/banner_one.png" alt="">
+    </div>
+
+    <div class="special-slider-card-container">
+      <img class="speical-slider-img" src="./imgs/banner_two.png" alt="">
+    </div>
+
+    <div class="special-slider-card-container">
+      <img class="speical-slider-img" src="./imgs/banner_three.png" alt="">
+    </div>
+
+    <div class="special-slider-card-container">
+      <img class="speical-slider-img" src="./imgs/banner_one.png" alt="">
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".cover-images-slider", {
+    loop: true,
+    autoplay: {
+      delay: 2000, // Slide changes every 2 seconds
+      disableOnInteraction: false, // Continue autoplay on interaction
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var swiper = new Swiper(".categories-slider", {
+    loop: true,
+    autoplay: {
+      delay: 2000, // Slide changes every 2 seconds
+      disableOnInteraction: false, // Continue autoplay on interaction
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
+
 </body>
 
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
-  const categories = document.querySelectorAll('.categories-bar .category');
+    const categories = document.querySelectorAll('.categories-bar .category');
 
-  categories.forEach(category => {
-    category.addEventListener('click', function() {
-      // Remove .category-selected from all categories
-      categories.forEach(cat => {
-        cat.classList.remove('category-selected');
+    categories.forEach(category => {
+      category.addEventListener('click', function () {
+        // Remove .category-selected from all categories
+        categories.forEach(cat => {
+          cat.classList.remove('category-selected');
+        });
+
+        // Add .category-selected to the clicked category
+        this.classList.add('category-selected');
       });
-
-      // Add .category-selected to the clicked category
-      this.classList.add('category-selected');
     });
   });
-});
 </script>
+
+<!-- Swiper JS -->
+
+
 
 </html>
