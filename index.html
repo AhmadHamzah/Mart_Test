@@ -75,20 +75,20 @@
   <div class="swiper cover-images-slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-      <div class="swiper-zoom-container">
-        <img src="./imgs/cover-image.jpeg" alt="">
+        <div class="swiper-zoom-container">
+          <img src="./imgs/cover-image.jpeg" alt="">
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="swiper-zoom-container">
-        <img src="./imgs/cover-image.jpeg" alt="">
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./imgs/cover-image.jpeg" alt="">
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="swiper-zoom-container">
-        <img src="./imgs/cover-image.jpeg" alt="">
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./imgs/cover-image.jpeg" alt="">
+        </div>
       </div>
-    </div>
     </div>
     <div class="swiper-pagination"></div>
 
@@ -478,6 +478,24 @@
         el: ".swiper-pagination",
       },
     });
+
+    function getZoomFactor() {
+      var deviceWidth, landscape = Math.abs(window.orientation) == 90
+      // workaround for strange screen.height on the iPhone (v3.1.3)
+      if (window.screen.width == 320) deviceWidth = landscape ? 480 : 320
+      else deviceWidth = window.screen[landscape ? 'height' : 'width']
+      return deviceWidth / window.innerWidth
+    }
+
+    // init the slider
+    var $mySlider = $('#mySlider').swiper()
+
+    // detect the zoom gesture events
+    $mySlider.on('gestureend', function (e) {
+      // if the page is zoomed disable the swipe
+      $mySlider.toggleClass('swiper-no-swiping', getZoomFactor() > 1)
+    });
+
   </script>
 
 </body>
