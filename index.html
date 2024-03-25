@@ -73,13 +73,20 @@
             <div class="swiper cover-images-slider1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./imgs/product_one.jpg" alt="">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/product_one.jpg" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./imgs/proudct_two.jpg" alt="">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/proudct_two.jpg" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./imgs/product_three.jpg" alt="">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/product_three.jpg" alt="">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -111,7 +118,7 @@
         galleryTop.on('click', function () {
             let slideIndex = this.realIndex;
             modal.style.display = "block";
-            
+
             var galleryThumbs = new Swiper(".gallery-thumbs", {
                 spaceBetween: 12,
                 slidesPerView: "auto",
@@ -123,16 +130,17 @@
             });
 
             var galleryTop1 = new Swiper(".cover-images-slider1", {
+                zoom: true,
                 allowTouchMove: false,
                 initialSlide: this.realIndex,
                 thumbs: {
                     swiper: galleryThumbs,
-                },
-                zoom: true
+                }
+
 
             });
 
-     
+
 
 
         });
