@@ -2,140 +2,148 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
 
-  <!-- Modal Styles -->
-  <style>
+<style>
+    .gallery-thumbs .swiper-slide {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gallery-thumbs .swiper-slide img {
+        width: 100%;
+    }
+
+    .gallery-thumbs .swiper-wrapper {
+        justify-content: space-evenly;
+    }
+
     .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.9);
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
     }
 
-    .modal-img-swiper {
-      margin-top: 40px;
-    }
-
-    .modal-content {
-      width: 95%;
-      height: 30%;
-      max-width: 700px;
+    #zoomable-swiper-container {
+        margin-top: 100px;
     }
 
     .close {
-      position: absolute;
-      top: 5px;
-      right: 15px;
-      color: #f1f1f1;
-      font-size: 30px;
-      font-weight: bold;
-      cursor: pointer;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        color: #f1f1f1;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 400;
     }
-  </style>
-</head>
+</style>
 
 <body>
-  <!-- Swiper -->
-  <div class="swiper cover-images-slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="swiper-zoom-container">
-          <img src="./imgs/cover-image.jpeg" alt="">
-        </div>
-      </div>
 
-      <div class="swiper-slide">
-        <div class="swiper-zoom-container">
-          <img src="./imgs/cover-image.jpeg" alt="">
+    <div class="swiper cover-images-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./imgs/product_one.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./imgs/proudct_two.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./imgs/product_three.jpg" alt="">
+            </div>
         </div>
-      </div>
-      <!-- More slides... -->
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
 
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-
-    <div class="swiper modal-img-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="swiper-zoom-container">
-            <img class="modal-content" id="img01">
-          </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div id="zoomable-swiper-container">
+            <div class="swiper cover-images-slider1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./imgs/product_one.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./imgs/proudct_two.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./imgs/product_three.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div id="zoombale-thumbs-swiper-container">
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./imgs/product_one.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./imgs/proudct_two.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./imgs/product_three.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Initialize Swiper and Add Modal Logic -->
-  <script>
-    var swiper = new Swiper(".cover-images-slider", {
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
 
-    var modalSwiper; // Variable to hold the modal Swiper instance
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
 
-    // Function to initialize the modal Swiper
-    function initModalSwiper() {
-      modalSwiper = new Swiper('.modal-img-swiper', {
-        zoom: true,
-        spaceBetween: 30,
-      });
-    }
+        var galleryTop = new Swiper(".cover-images-slider", {
 
-    // Get the modal
-    var modal = document.getElementById("myModal");
+        });
 
-    // Get the image and insert it inside the modal
-    var modalImg = document.getElementById("img01");
-    var images = document.querySelectorAll('.swiper-zoom-container img');
 
-    images.forEach(function (img) {
-      img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        if (!modalSwiper) { // Initialize the modal Swiper if it hasn't been initialized
-          initModalSwiper();
-        } else {
-          modalSwiper.update(); // Update the swiper instance if it's already initialized
+
+
+        var modal = document.getElementById("myModal");
+        galleryTop.on('click', function () {
+            let slideIndex = this.realIndex;
+            modal.style.display = "block";
+            
+            var galleryThumbs = new Swiper(".gallery-thumbs", {
+                spaceBetween: 12,
+                slidesPerView: "auto",
+                watchSlidesProgress: true,
+                grabCursor: true,
+                centeredSlides: false,
+                allowTouchMove: false,
+                a11y: false,
+            });
+
+            var galleryTop1 = new Swiper(".cover-images-slider1", {
+                allowTouchMove: false,
+                initialSlide: this.realIndex,
+                thumbs: {
+                    swiper: galleryThumbs,
+                },
+                zoom: true
+
+            });
+
+     
+
+
+        });
+
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
         }
-      }
-    });
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    // Close modal if clicked outside of image
-    modal.onclick = function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-
-  </script>
+    </script>
 
 </body>
 
