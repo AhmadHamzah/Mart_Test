@@ -2,524 +2,123 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Modal Styles -->
+    <style>
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+
+            width: 95%;
+            max-width: 700px;
+        }
+
+
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Swiper -->
+    <div class="swiper cover-images-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="./imgs/cover-image.jpeg" alt="">
+                </div>
+            </div>
 
-
-  <div class="navigation-bar">
-    <div class="frame bottom-nav-home active">
-      <div class="img-wrapper">
-        <img class="img true-icon active-icon"
-          src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/home-true.svg">
-      </div>
-      <div class="text-wrapper">الرئيسية</div>
-      <div class="rectangle" style="display: block;"></div>
-    </div>
-    <div class="frame bottom-nav-categories sidebar-toggle" sidebarid="SideListMenu">
-      <div class="img-wrapper">
-        <img class="img false-icon"
-          src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/categories-false.svg">
-      </div>
-      <div class="text-wrapper">الأقسام</div>
-      <div class="rectangle" style="display: none;"></div>
-    </div>
-    <div class="frame bottom-nav-new-products" onclick="window.open('https://mart.ps/new-products','_blank')">
-      <div class="img-wrapper">
-        <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/new-false.svg">
-      </div>
-      <div class="text-wrapper">جديدنا</div>
-      <div class="rectangle" style="display: none;"></div>
-    </div>
-    <div class="frame bottom-nav-cart" onclick="window.open('https://mart.ps/quick-order','_blank')">
-      <div class="img-wrapper">
-        <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/cart-false.svg">
-
-      </div>
-      <div class="text-wrapper">السلة</div>
-      <div class="rectangle" style="display: none;"></div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="./imgs/cover-image.jpeg" alt="">
+                </div>
+            </div>
+            <!-- More slides... -->
+        </div>
+        <div class="swiper-pagination"></div>
     </div>
 
-    <div class="frame bottom-nav-myaccount sidebar-toggle" sidebarid="accountsidebar">
-      <div class="img-wrapper">
-        <img class="img false-icon" src="https://cdn.mart.ps/themes/pt_titanshop/img/icon/bottomNavBar/user-false.svg">
-      </div>
-      <div class="text-wrapper">حسابي</div>
-      <div class="rectangle" style="display: none;"></div>
-    </div>
-  </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
 
-  <header class="page-header">
-    <h1>Mart.Ps</h1>
-    <div class="search-bar-container">
-      <img class="icon" src="./imgs/icon.png" alt="">
-
-      <div class="search-bar">
-        <div class="search-field">بحث</div>
-        <img class="search-icon" src="./imgs/search-icon.png" alt="">
-      </div>
+        <div class="swiper modal-img-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img class="modal-content" id="img01">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <img class="heart-icon" src="./imgs/heart-icon.png" alt="">
-
-  </header>
-
-  <div class="swiper cover-images-slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="swiper-zoom-container">
-          <img src="./imgs/cover-image.jpeg" alt="">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper-zoom-container">
-          <img src="./imgs/cover-image.jpeg" alt="">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper-zoom-container">
-          <img src="./imgs/cover-image.jpeg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>
-
-  </div>
-
-
-  <div class="swiper categories-slider">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide">
-        <div class="item">
-          <img src="imgs/one.png" alt="Image 1">
-          <div class="title">ألعاب</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/two.png" alt="Image 2">
-          <div class="title">شنط</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/three.png" alt="Image 3">
-          <div class="title">مطبخ</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/four.png" alt="Image 4">
-          <div class="title">أحذية</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/five.png" alt="Image 5">
-          <div class="title">التكرونيات</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/six.png" alt="Image 6">
-          <div class="title">ساعات</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/seven.png" alt="Image 7">
-          <div class="title">ملابس</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/eight.png" alt="Image 8">
-          <div class="title">مجوهرات</div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="item">
-          <img src="imgs/one.png" alt="Image 1">
-          <div class="title">ألعاب</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/two.png" alt="Image 2">
-          <div class="title">شنط</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/three.png" alt="Image 3">
-          <div class="title">مطبخ</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/four.png" alt="Image 4">
-          <div class="title">أحذية</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/five.png" alt="Image 5">
-          <div class="title">التكرونيات</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/six.png" alt="Image 6">
-          <div class="title">ساعات</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/seven.png" alt="Image 7">
-          <div class="title">ملابس</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/eight.png" alt="Image 8">
-          <div class="title">مجوهرات</div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="item">
-          <img src="imgs/one.png" alt="Image 1">
-          <div class="title">ألعاب</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/two.png" alt="Image 2">
-          <div class="title">شنط</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/three.png" alt="Image 3">
-          <div class="title">مطبخ</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/four.png" alt="Image 4">
-          <div class="title">أحذية</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/five.png" alt="Image 5">
-          <div class="title">التكرونيات</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/six.png" alt="Image 6">
-          <div class="title">ساعات</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/seven.png" alt="Image 7">
-          <div class="title">ملابس</div>
-        </div>
-
-        <div class="item">
-          <img src="imgs/eight.png" alt="Image 8">
-          <div class="title">مجوهرات</div>
-        </div>
-      </div>
-
-
-    </div>
-    <div class="swiper-pagination"></div>
-
-
-  </div>
-
-  <div class="grid">
-    <div class="grid-item">
-      <img src="imgs/onee.png" alt="">
-      <div class="grid-caption-container">
-        <div class="arrow"></div>
-        <div class="grid-item-title">عروض لك لملابس النساء</div>
-      </div>
-    </div>
-
-    <div class="grid-item">
-      <img src="imgs/twoo.png" alt="">
-      <div class="grid-caption-container">
-        <div class="arrow"></div>
-        <div class="grid-item-title">استمر في التسوق للملابس الرياضية</div>
-      </div>
-    </div>
-
-    <div class="grid-item">
-      <img src="imgs/threee.png" alt="">
-      <div class="grid-caption-container">
-        <div class="arrow"></div>
-        <div class="grid-item-title">استمر في شراء المكياج</div>
-      </div>
-    </div>
-
-    <div class="grid-item">
-      <img src="imgs/fourr.png" alt="">
-      <div class="grid-caption-container">
-        <div class="arrow"></div>
-        <div class="grid-item-title">جديد من قسم الروايات والقصص</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="brands-container">
-    <header>
-      <div class="arrow"></div>
-      <h2>الماركات العالمية الرياضية بأقوى سعر</h2>
-    </header>
-
-    <div class="brands-slider">
-      <div class="brand-container">
-        <img class="brand-image" src="./imgs/brands/brand_one.png" alt="">
-        <img class="example-image" src="./imgs/twoo.png" alt="">
-      </div>
-      <div class="brand-container">
-        <img class="brand-image" src="./imgs/brands/brand_two.png" alt="">
-        <img class="example-image" src="./imgs/onee.png" alt="">
-      </div>
-
-      <div class="brand-container">
-        <img class="brand-image" src="./imgs/brands/brand_three.png" alt="">
-        <img class="example-image" src="./imgs/twoo.png" alt="">
-      </div>
-
-      <div class="brand-container">
-        <img class="brand-image" src="./imgs/brands/brand_one.png" alt="">
-        <img class="example-image" src="./imgs/onee.png" alt="">
-      </div>
-
-      <div class="brand-container">
-        <img class="brand-image" src="./imgs/brands/brand_one.png" alt="">
-        <img class="example-image" src="./imgs/twoo.png" alt="">
-      </div>
-
-
-      <div class="brand-container">
-        <img class="brand-image" src="./imgs/brands/brand_two.png" alt="">
-        <img class="example-image" src="./imgs/onee.png" alt="">
-      </div>
-
-
-    </div>
-  </div>
-
-  <div class="products-container">
-    <div class="categories-bar">
-      <div class="category category-selected">اخترنا لك</div>
-      <div class="category">تصفية مارت</div>
-      <div class="category">ماركات</div>
-      <div class="category">الأكثر مبيعا</div>
-      <div class="category">جديد</div>
-    </div>
-
-    <section class="product-section">
-      <div class="product-section-header">
-        <div class="arrow"></div>
-        <div class="product-section-header-title">قسم المطبخ</div>
-      </div>
-
-      <div class="product-section-items">
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/kitchen_one.jpg" alt="">
-          <div class="product-section-item-price">59.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/kitchen_two.png" alt="">
-          <div class="product-section-item-price">99.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/kitchen_three.png" alt="">
-          <div class="product-section-item-price">109.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-      </div>
-
-
-    </section>
-
-    <section class="product-section">
-      <div class="product-section-header">
-        <div class="arrow"></div>
-        <div class="product-section-header-title">قسم الملابس الرجالية</div>
-      </div>
-
-      <div class="product-section-items">
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/men-clothes-one.png" alt="">
-          <div class="product-section-item-price">59.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/men-clothes-two.png" alt="">
-          <div class="product-section-item-price">99.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/men-clothes-three.png" alt="">
-          <div class="product-section-item-price">109.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-      </div>
-
-
-    </section>
-
-    <section class="product-section">
-      <div class="product-section-header">
-        <div class="arrow"></div>
-        <div class="product-section-header-title">قسم الملابس النسائية</div>
-      </div>
-
-      <div class="product-section-items">
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/women-clothes-one.png" alt="">
-          <div class="product-section-item-price">59.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/women-clothes-two.png" alt="">
-          <div class="product-section-item-price">99.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/women-clothes-three.png" alt="">
-          <div class="product-section-item-price">109.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-      </div>
-
-
-    </section>
-
-    <section class="product-section">
-      <div class="product-section-header">
-        <div class="arrow"></div>
-        <div class="product-section-header-title">قسم المنزل</div>
-      </div>
-
-      <div class="product-section-items">
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/home_one.png" alt="">
-          <div class="product-section-item-price">59.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/home_two.png" alt="">
-          <div class="product-section-item-price">99.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-
-        <div class="product-section-item">
-          <img class="product-section-item-img" src="./imgs/home_three.png" alt="">
-          <div class="product-section-item-price">109.99</div>
-          <img class="product-section-item-cart-logo-img" src="./imgs/cart-icon.png" alt="">
-        </div>
-      </div>
-
-
-    </section>
-
-  </div>
-
-  <div class="special-slider-container">
-    <div class="special-slider-card-container">
-      <img class="speical-slider-img" src="./imgs/banner_one.png" alt="">
-    </div>
-
-    <div class="special-slider-card-container">
-      <img class="speical-slider-img" src="./imgs/banner_two.png" alt="">
-    </div>
-
-    <div class="special-slider-card-container">
-      <img class="speical-slider-img" src="./imgs/banner_three.png" alt="">
-    </div>
-
-    <div class="special-slider-card-container">
-      <img class="speical-slider-img" src="./imgs/banner_one.png" alt="">
-    </div>
-
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".cover-images-slider", {
-      loop: true,
-      zoom: true,
-      // autoplay: {
-      //   delay: 2000, // Slide changes every 2 seconds
-      //   disableOnInteraction: false, // Continue autoplay on interaction
-      // },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-
-    var swiper = new Swiper(".categories-slider", {
-      loop: true,
-      autoplay: {
-        delay: 2000, // Slide changes every 2 seconds
-        disableOnInteraction: false, // Continue autoplay on interaction
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-
-    function getZoomFactor() {
-      var deviceWidth, landscape = Math.abs(window.orientation) == 90
-      // workaround for strange screen.height on the iPhone (v3.1.3)
-      if (window.screen.width == 320) deviceWidth = landscape ? 480 : 320
-      else deviceWidth = window.screen[landscape ? 'height' : 'width']
-      return deviceWidth / window.innerWidth
-    }
-
-    // init the slider
-    var $mySlider = $('#mySlider').swiper()
-
-    // detect the zoom gesture events
-    $mySlider.on('gestureend', function (e) {
-      // if the page is zoomed disable the swipe
-      $mySlider.toggleClass('swiper-no-swiping', getZoomFactor() > 1)
-    });
-
-  </script>
-
-</body>
-
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const categories = document.querySelectorAll('.categories-bar .category');
-
-    categories.forEach(category => {
-      category.addEventListener('click', function () {
-        // Remove .category-selected from all categories
-        categories.forEach(cat => {
-          cat.classList.remove('category-selected');
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper and Add Modal Logic -->
+    <script>
+        // Initialize the main cover images Swiper
+        var coverSwiper = new Swiper(".cover-images-slider", {
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
         });
-
-        // Add .category-selected to the clicked category
-        this.classList.add('category-selected');
-      });
-    });
-  });
-</script>
-
-<!-- Swiper JS -->
-
-
+    
+        // Initialize the modal Swiper with zoom functionality
+        var modalSwiper = new Swiper(".modal-img-swiper", {
+            zoom: true,
+            spaceBetween: 30,
+        });
+    
+        // Get the modal
+        var modal = document.getElementById("myModal");
+    
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+    
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    
+        // Function to open the modal and display the clicked image with zoom functionality
+        var images = document.querySelectorAll('.swiper-zoom-container img');
+        images.forEach(function(img) {
+            img.onclick = function() {
+                var newImgSrc = this.src;
+                var modalImg = document.getElementById("img01");
+                modalImg.src = newImgSrc; // Update the source of the modal image
+                modal.style.display = "block"; // Display the modal
+                modalSwiper.update(); // Important: Update the modal Swiper to ensure proper functionality
+            }
+        });
+    </script>
+    
+</body>
 
 </html>
