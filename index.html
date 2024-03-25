@@ -2,123 +2,138 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Modal Styles -->
-    <style>
-        .modal {
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.9);
-        }
+  <!-- Modal Styles -->
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+    }
 
-        .modal-content {
+    .modal-content {
+      width: 95%;
+      height: 30%;
+      margin-top: 20px;
+      max-width: 700px;
+    }
 
-            width: 95%;
-            max-width: 700px;
-        }
-
-
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Swiper -->
-    <div class="swiper cover-images-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="./imgs/cover-image.jpeg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="./imgs/cover-image.jpeg" alt="">
-                </div>
-            </div>
-            <!-- More slides... -->
+  <!-- Swiper -->
+  <div class="swiper cover-images-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./imgs/cover-image.jpeg" alt="">
         </div>
-        <div class="swiper-pagination"></div>
-    </div>
+      </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-
-        <div class="swiper modal-img-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiper-zoom-container">
-                        <img class="modal-content" id="img01">
-                    </div>
-                </div>
-            </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./imgs/cover-image.jpeg" alt="">
         </div>
+      </div>
+      <!-- More slides... -->
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper and Add Modal Logic -->
-    <script>
-        // Initialize the main cover images Swiper
-        var coverSwiper = new Swiper(".cover-images-slider", {
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
-    
-        // Initialize the modal Swiper with zoom functionality
-        var modalSwiper = new Swiper(".modal-img-swiper", {
-            zoom: true,
-            spaceBetween: 30,
-        });
-    
-        // Get the modal
-        var modal = document.getElementById("myModal");
-    
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-    
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-            modal.style.display = "none";
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+
+    <div class="swiper modal-img-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper-zoom-container">
+            <img class="modal-content" id="img01">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper and Add Modal Logic -->
+  <script>
+    var swiper = new Swiper(".cover-images-slider", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    var modalSwiper; // Variable to hold the modal Swiper instance
+
+    // Function to initialize the modal Swiper
+    function initModalSwiper() {
+      modalSwiper = new Swiper('.modal-img-swiper', {
+        zoom: true,
+        spaceBetween: 30,
+      });
+    }
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal
+    var modalImg = document.getElementById("img01");
+    var images = document.querySelectorAll('.swiper-zoom-container img');
+
+    images.forEach(function (img) {
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        if (!modalSwiper) { // Initialize the modal Swiper if it hasn't been initialized
+          initModalSwiper();
+        } else {
+          modalSwiper.update(); // Update the swiper instance if it's already initialized
         }
-    
-        // Function to open the modal and display the clicked image with zoom functionality
-        var images = document.querySelectorAll('.swiper-zoom-container img');
-        images.forEach(function(img) {
-            img.onclick = function() {
-                var newImgSrc = this.src;
-                var modalImg = document.getElementById("img01");
-                modalImg.src = newImgSrc; // Update the source of the modal image
-                modal.style.display = "block"; // Display the modal
-                modalSwiper.update(); // Important: Update the modal Swiper to ensure proper functionality
-            }
-        });
-    </script>
-    
+      }
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // Close modal if clicked outside of image
+    modal.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  </script>
+
 </body>
 
 </html>
