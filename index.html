@@ -16,11 +16,11 @@
     }
 
     .gallery-thumbs .swiper-slide {
-        width: 23%;
+        width: 20%;
         flex: 0 0 auto;
         cursor: pointer;
         border: 1px solid #ccc;
-        gap: 5px;
+        gap: 3px;
         /* Light gray border */
         box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1),
             /* white glow for depth */
@@ -213,6 +213,17 @@
         function changeMainImage(src) {
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
             zoomableSwiperImage.src = src;
+            var galleryTop1 = new Swiper(".cover-images-slider1", {
+                zoom: true,
+                allowTouchMove: false,
+                // thumbs: {
+                //     swiper: galleryThumbs,
+                //     slideThumbActiveClass: 'swiper-slide-thumb-active',
+                //     thumbsContainerClass: 'gallery-thumbs'
+                // }
+            });
+
+            galleryTop1.zoom.out();
 
         }
 
