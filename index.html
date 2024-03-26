@@ -19,24 +19,13 @@
         width: 20%;
         flex: 0 0 auto;
         cursor: pointer;
-        border: 1px solid #ccc;
         gap: 3px;
-        /* Light gray border */
-        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1),
-            /* white glow for depth */
-            0 6px 20px 0 rgba(255, 255, 255, 0.1);
-        /* subtle white shadow */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+     
         /* Smooth transition for hover effect */
     }
 
     .gallery-thumbs .swiper-slide:hover {
-        transform: scale(1.05);
-        /* Slightly enlarge thumbnails on hover */
-        box-shadow: 0 4px 12px 0 rgba(255, 255, 255, 0.2),
-            /* stronger white glow for hover effect */
-            0 8px 24px 0 rgba(255, 255, 255, 0.2);
-        /* stronger white shadow for hover effect */
+ 
     }
 
     .gallery-thumbs .swiper-slide img {
@@ -93,6 +82,8 @@
 
     .cover-images-slider .swiper-pagination-bullet {
         background: #ccc !important;
+        width: 10px;
+        height: 10px;
     }
 
     .cover-images-slider .swiper-pagination-bullet-active {
