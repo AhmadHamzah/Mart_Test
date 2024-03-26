@@ -177,7 +177,7 @@
 
 
         var galleryTop = new Swiper(".cover-images-slider", {
-            loop: true,
+            loop: false,
             pagination: {
                 el: ".swiper-pagination",
             },
@@ -194,8 +194,9 @@
 
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
 
-            console.log(swiperImage.src);
+            console.log(slideIndex);
 
+            console.log(swiperImage.src);
             zoomableSwiperImage.src = swiperImage.src;
             var galleryTop1 = new Swiper(".cover-images-slider1", {
                 zoom: true,
