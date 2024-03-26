@@ -210,6 +210,13 @@
             
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
             zoomableSwiperImage.src = '';
+
+            var galleryTop1 = new Swiper(".cover-images-slider1", {
+                zoom: true,
+                allowTouchMove: false,
+            });
+
+            galleryTop1.zoom.out();
         }
 
         function changeMainImage(src) {
