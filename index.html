@@ -86,6 +86,23 @@
         cursor: pointer;
         z-index: 400;
     }
+
+    .swiper-pagination {
+        margin-top: 20px !important;
+    }
+
+    .cover-images-slider .swiper-pagination-bullet {
+        background: #ccc !important;
+    }
+
+    .cover-images-slider .swiper-pagination-bullet-active {
+        background: #e62e04 !important;
+    }
+
+    .cover-images-slider .swiper-pagination {
+        position: unset !important;
+        margin-top: 0px !important; 
+    }
 </style>
 
 <body>
@@ -117,6 +134,8 @@
                 <img src="./imgs/product_eight.jpg" alt="">
             </div>
         </div>
+        <div class="swiper-pagination"></div>
+
     </div>
 
     <div id="myModal" class="modal">
@@ -161,6 +180,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 
+
         var galleryTop = new Swiper(".cover-images-slider", {
             loop: true,
             pagination: {
@@ -175,17 +195,6 @@
             let slideIndex = this.realIndex;
             modal.style.display = "block";
 
-            // var galleryThumbs = new Swiper(".gallery-thumbs", {
-            //     spaceBetween: 12,
-            //     slidesPerView: "auto",
-            //     watchSlidesProgress: false,
-            //     grabCursor: true,
-            //     centeredSlides: false,
-            //     allowTouchMove: false,
-            //     a11y: false,
-            //     slideToClickedSlide: false
-            // });
-
             var swiperImage = document.querySelectorAll('.cover-images-slider .swiper-slide img')[slideIndex];
 
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
@@ -195,11 +204,6 @@
             var galleryTop1 = new Swiper(".cover-images-slider1", {
                 zoom: true,
                 allowTouchMove: false,
-                // thumbs: {
-                //     swiper: galleryThumbs,
-                //     slideThumbActiveClass: 'swiper-slide-thumb-active',
-                //     thumbsContainerClass: 'gallery-thumbs'
-                // }
             });
 
         });
@@ -214,15 +218,10 @@
             var galleryTop1 = new Swiper(".cover-images-slider1", {
                 zoom: true,
                 allowTouchMove: false,
-                // thumbs: {
-                //     swiper: galleryThumbs,
-                //     slideThumbActiveClass: 'swiper-slide-thumb-active',
-                //     thumbsContainerClass: 'gallery-thumbs'
-                // }
             });
 
             galleryTop1.zoom.out();
-            
+
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
             zoomableSwiperImage.src = src;
 
