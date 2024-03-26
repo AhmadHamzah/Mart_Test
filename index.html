@@ -9,9 +9,14 @@
 </head>
 
 <style>
+    .gallery-thumbs {
+        position: fixed;
+
+        width: 100%;
+    }
+
     .gallery-thumbs .swiper-slide {
-        width: 100px;
-        height: 100px;
+        width: 23%;
     }
 
     .gallery-thumbs .swiper-slide img {
@@ -19,7 +24,18 @@
     }
 
     .gallery-thumbs .swiper-wrapper {
-        justify-content: space-evenly;
+        width: 100%;
+        position: fixed;
+        right: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        /* Enable horizontal scrolling */
+        /* Smooth scrolling on touch devices */
+        height: 17vh;
+        flex-direction: row-reverse;
+        justify-content: space-around;
     }
 
     .modal {
@@ -37,6 +53,11 @@
 
     #zoomable-swiper-container {
         margin-top: 100px;
+    }
+
+    #zoombale-thumbs-swiper-container {
+        width: 100%;
+        position: fixed;
     }
 
     .close {
@@ -64,6 +85,21 @@
             <div class="swiper-slide">
                 <img src="./imgs/product_three.jpg" alt="">
             </div>
+            <div class="swiper-slide">
+                <img src="./imgs/product_four.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./imgs/proudct_five.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./imgs/product_six.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./imgs/product_seven.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./imgs/product_eight.jpg" alt="">
+            </div>
         </div>
     </div>
 
@@ -86,7 +122,31 @@
                         <div class="swiper-zoom-container">
                             <img src="./imgs/product_three.jpg" alt="">
                         </div>
-
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/product_four.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/product_five.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/product_six.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/product_seven.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="./imgs/product_eight.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,6 +157,11 @@
                     <div class="swiper-slide"><img src="./imgs/product_one.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="./imgs/proudct_two.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="./imgs/product_three.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./imgs/product_four.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./imgs/product_five.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./imgs/product_six.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./imgs/product_seven.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./imgs/product_eight.jpg" alt=""></div>
                 </div>
             </div>
         </div>
@@ -104,15 +169,11 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
+    <script>f
 
         var galleryTop = new Swiper(".cover-images-slider", {
 
         });
-
-
-
 
         var modal = document.getElementById("myModal");
         galleryTop.on('click', function () {
@@ -120,13 +181,15 @@
             modal.style.display = "block";
 
             var galleryThumbs = new Swiper(".gallery-thumbs", {
-                spaceBetween: 12,
-                slidesPerView: "auto",
+                spaceBetween: 10,
+                slidesPerView: 3,
+                loop: true,
+                //freeMode: true,
+                centered: true,
+                slideToClickedSlide: true,
+                loopedSlides: 5, //looped slides should be the same
+                watchSlidesVisibility: true,
                 watchSlidesProgress: true,
-                grabCursor: true,
-                centeredSlides: false,
-                allowTouchMove: false,
-                a11y: false,
             });
 
             var galleryTop1 = new Swiper(".cover-images-slider1", {
@@ -136,8 +199,6 @@
                 thumbs: {
                     swiper: galleryThumbs,
                 }
-
-
             });
 
 
