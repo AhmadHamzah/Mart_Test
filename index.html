@@ -19,6 +19,24 @@
         width: 23%;
         flex: 0 0 auto;
         cursor: pointer;
+        border: 1px solid #ccc;
+        gap: 5px;
+        /* Light gray border */
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1),
+            /* white glow for depth */
+            0 6px 20px 0 rgba(255, 255, 255, 0.1);
+        /* subtle white shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Smooth transition for hover effect */
+    }
+
+    .gallery-thumbs .swiper-slide:hover {
+        transform: scale(1.05);
+        /* Slightly enlarge thumbnails on hover */
+        box-shadow: 0 4px 12px 0 rgba(255, 255, 255, 0.2),
+            /* stronger white glow for hover effect */
+            0 8px 24px 0 rgba(255, 255, 255, 0.2);
+        /* stronger white shadow for hover effect */
     }
 
     .gallery-thumbs .swiper-slide img {
@@ -32,7 +50,6 @@
         gap: 8px;
         /* Space between thumbnails */
 
-        height: 17vh;
         justify-content: space-between;
         flex-direction: row-reverse;
     }
@@ -120,14 +137,22 @@
         <div id="zoombale-thumbs-swiper-container">
             <div class="swiper-container gallery-thumbs">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./imgs/product_one.jpg" alt="" onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/proudct_two.jpg" alt="" onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_three.jpg" alt="" onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_four.jpg" alt="" onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_five.jpg" alt="" onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_six.jpg" alt="" onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_seven.jpg" alt="" onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_eight.jpg" alt="" onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/product_one.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/proudct_two.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/product_three.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/product_four.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/product_five.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/product_six.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/product_seven.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
+                    <div class="swiper-slide"><img src="./imgs/product_eight.jpg" alt=""
+                            onclick="changeMainImage(this.src)"></div>
                 </div>
             </div>
         </div>
@@ -164,7 +189,7 @@
             var swiperImage = document.querySelectorAll('.cover-images-slider .swiper-slide img')[slideIndex];
 
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
-            
+
             console.log(swiperImage.src);
             zoomableSwiperImage.src = swiperImage.src;
             var galleryTop1 = new Swiper(".cover-images-slider1", {
