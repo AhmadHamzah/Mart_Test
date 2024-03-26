@@ -169,7 +169,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>f
+    <script>
 
         var galleryTop = new Swiper(".cover-images-slider", {
 
@@ -181,15 +181,14 @@
             modal.style.display = "block";
 
             var galleryThumbs = new Swiper(".gallery-thumbs", {
-                spaceBetween: 10,
-                slidesPerView: 3,
-                loop: true,
-                //freeMode: true,
-                centered: true,
-                slideToClickedSlide: true,
-                loopedSlides: 5, //looped slides should be the same
-                watchSlidesVisibility: true,
+                spaceBetween: 12,
+                slidesPerView: 4,
                 watchSlidesProgress: true,
+                grabCursor: true,
+                centeredSlides: false,
+                allowTouchMove: false,
+                a11y: false,
+                stopOnLastSlide: true
             });
 
             var galleryTop1 = new Swiper(".cover-images-slider1", {
