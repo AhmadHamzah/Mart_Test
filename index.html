@@ -20,13 +20,12 @@
         flex: 0 0 auto;
         cursor: pointer;
         gap: 3px;
-     
-        /* Smooth transition for hover effect */
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+
     }
 
-    .gallery-thumbs .swiper-slide:hover {
- 
-    }
+    .gallery-thumbs .swiper-slide:hover {}
 
     .gallery-thumbs .swiper-slide img {
         width: 100%;
@@ -54,6 +53,11 @@
         overflow: auto;
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .gallery-thumbs .swiper-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
     }
 
     #zoomable-swiper-container {
@@ -92,7 +96,7 @@
 
     .cover-images-slider .swiper-pagination {
         position: unset !important;
-        margin-top: 0px !important; 
+        margin-top: 0px !important;
     }
 </style>
 
@@ -203,6 +207,9 @@
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function () {
             modal.style.display = "none";
+            
+            var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
+            zoomableSwiperImage.src = '';
         }
 
         function changeMainImage(src) {
