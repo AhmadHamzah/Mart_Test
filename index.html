@@ -9,35 +9,34 @@
 </head>
 
 <style>
-    .gallery-thumbs {
+    .thumbs-swiper {
         position: fixed;
         width: 100%;
         margin-top: 10px;
     }
 
-    .gallery-thumbs .swiper-slide {
+    .thumbs-swiper .swiper-slide {
         width: 20%;
         flex: 0 0 auto;
         cursor: pointer;
         gap: 3px;
 
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Smooth transition for hover effect */
 
     }
 
-    .gallery-thumbs .swiper-slide:hover {}
+    .thumbs-swipers .swiper-slide:hover {}
 
-    .gallery-thumbs .swiper-slide img {
+    .thumbs-swiper .swiper-slide img {
         width: 100%;
     }
 
-    .gallery-thumbs .swiper-wrapper {
+    .thumbs-swiper {
         display: flex;
         overflow-x: auto;
         white-space: nowrap;
         gap: 8px;
-        /* Space between thumbnails */
-
         justify-content: space-between;
         flex-direction: row-reverse;
     }
@@ -55,7 +54,7 @@
         background-color: rgba(0, 0, 0, 0.9);
     }
 
-    .gallery-thumbs .swiper-wrapper::-webkit-scrollbar {
+    .thumbs-swiper::-webkit-scrollbar {
         display: none;
         /* Safari and Chrome */
     }
@@ -64,7 +63,7 @@
         margin-top: 100px;
     }
 
-    #zoombale-thumbs-swiper-container {
+    .thumbs-swiper {
         width: 100%;
         position: fixed;
     }
@@ -97,6 +96,10 @@
     .cover-images-slider .swiper-pagination {
         position: unset !important;
         margin-top: 0px !important;
+    }
+
+    .thumb-swiper-slide-active {
+        width: 21% !important;
     }
 </style>
 
@@ -148,28 +151,25 @@
                 </div>
             </div>
         </div>
-        <div id="zoombale-thumbs-swiper-container">
-            <div class="swiper-container gallery-thumbs">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./imgs/product_one.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/proudct_two.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_three.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_four.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_five.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_six.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_seven.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                    <div class="swiper-slide"><img src="./imgs/product_eight.jpg" alt=""
-                            onclick="changeMainImage(this.src)"></div>
-                </div>
-            </div>
+        <div class="thumbs-swiper">
+            <div class="swiper-slide"><img src="./imgs/product_one.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
+            <div class="swiper-slide"><img src="./imgs/proudct_two.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
+            <div class="swiper-slide"><img src="./imgs/product_three.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
+            <div class="swiper-slide"><img src="./imgs/product_four.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
+            <div class="swiper-slide"><img src="./imgs/product_five.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
+            <div class="swiper-slide"><img src="./imgs/product_six.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
+            <div class="swiper-slide"><img src="./imgs/product_seven.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
+            <div class="swiper-slide"><img src="./imgs/product_eight.jpg" alt=""
+                    onclick="changeMainImage(this.src, this)"></div>
         </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -212,12 +212,12 @@
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function () {
             modal.style.display = "none";
-            
+
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
             zoomableSwiperImage.src = '';
         }
 
-        function changeMainImage(src) {
+        function changeMainImage(src, clickedElement) {
             var galleryTop1 = new Swiper(".cover-images-slider1", {
                 zoom: true,
                 allowTouchMove: false,
@@ -228,6 +228,14 @@
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
             zoomableSwiperImage.src = src;
 
+            document.querySelectorAll('.thumbs-swiper .swiper-slide').forEach(function(slide) {
+        slide.classList.remove('thumb-swiper-slide-active');
+    });
+
+            // Add 'thumb-swiper-slide-active' class to the parent of the clicked image
+            if (clickedElement.parentElement) {
+                clickedElement.parentElement.classList.add('thumb-swiper-slide-active');
+            }
 
         }
 
