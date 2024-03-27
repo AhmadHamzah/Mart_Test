@@ -3,113 +3,16 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>Products Swiper</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/additional.css" />
+
 </head>
-
-<style>
-    .thumbs-swiper {
-        position: fixed;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .thumbs-swiper .swiper-slide {
-        width: 20%;
-        flex: 0 0 auto;
-        cursor: pointer;
-        gap: 3px;
-
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        /* Smooth transition for hover effect */
-
-    }
-
-    .thumbs-swipers .swiper-slide:hover {}
-
-    .thumbs-swiper .swiper-slide img {
-        width: 100%;
-    }
-
-    .thumbs-swiper {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 9px;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.9);
-    }
-
-    .thumbs-swiper::-webkit-scrollbar {
-        display: none;
-        /* Safari and Chrome */
-    }
-
-    #zoomable-swiper-container .swiper-wrapper {
-        margin-top: 25%;
-
-    }
-
-    .thumbs-swiper {
-        width: 100%;
-        position: fixed;
-    }
-
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 25px;
-        color: #f1f1f1;
-        font-size: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        z-index: 400;
-    }
-
-    .swiper-pagination {
-        margin-top: 20px !important;
-    }
-
-    .cover-images-slider .swiper-pagination-bullet {
-        color: #fff !important;
-        width: 10px;
-        height: 10px;
-    }
-
-    .cover-images-slider .swiper-pagination-bullet-active {
-        background: #e62e04 !important;
-    }
-
-    .thumb-swiper-slide-active img {
-        /* width: 21% !important; */
-
-        border: solid 2px #ccc;
-    }
-
-    .thumb-swiper-slide-active  {
-        width: 21% !important;
-        margin-right: 4px;
-
-    }
-</style>
 
 <body>
 
-    <div class="swiper cover-images-slider">
+    <div class="swiper product-images-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="./imgs/product_one.jpg" alt="">
@@ -137,24 +40,22 @@
             </div>
         </div>
         <div class="swiper-pagination"></div>
-
     </div>
 
-    <div id="myModal" class="modal">
+    <div id="product-images-zoomable-swiper-container">
         <span class="close">&times;</span>
-        <div id="zoomable-swiper-container">
-            <div class="swiper cover-images-slider1">
-                <div class="swiper-wrapper">
+        <div class="swiper product-images-zoomable-swiper">
+            <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
-                            <img src="" alt="">
-                        </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="" alt="">
                     </div>
-
                 </div>
             </div>
         </div>
+  
+
         <div class="thumbs-swiper">
             <div class="swiper-slide"><img src="./imgs/product_one.jpg" alt=""
                     onclick="changeMainImage(this.src, this)"></div>
@@ -176,85 +77,7 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-
-
-        var galleryTop = new Swiper(".cover-images-slider", {
-            loop: false,
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            slidesPerView: "auto",
-        });
-
-        var modal = document.getElementById("myModal");
-
-        galleryTop.on('click', function () {
-            let slideIndex = this.realIndex;
-            modal.style.display = "block";
-
-            var swiperImage = document.querySelectorAll('.cover-images-slider .swiper-slide img')[slideIndex];
-
-            var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
-
-            console.log(slideIndex);
-
-            console.log(swiperImage.src);
-            zoomableSwiperImage.src = swiperImage.src;
-            var galleryTop1 = new Swiper(".cover-images-slider1", {
-                zoom: true,
-                allowTouchMove: false,
-            });
-
-            galleryTop1.zoom.out();
-
-
-        });
-
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-            modal.style.display = "none";
-
-            var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
-            zoomableSwiperImage.src = '';
-        }
-
-        function changeMainImage(src, clickedElement) {
-            var galleryTop1 = new Swiper(".cover-images-slider1", {
-                zoom: true,
-                allowTouchMove: false,
-            });
-
-            galleryTop1.zoom.out();
-
-            var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
-            zoomableSwiperImage.src = src;
-
-            document.querySelectorAll('.thumbs-swiper .swiper-slide').forEach(function (slide) {
-                slide.classList.remove('thumb-swiper-slide-active');
-            });
-
-            // Add 'thumb-swiper-slide-active' class to the parent of the clicked image
-            if (clickedElement.parentElement) {
-                clickedElement.parentElement.classList.add('thumb-swiper-slide-active');
-            }
-
-        }
-
-        document.getElementById("myModal").addEventListener("click", function (event) {
-            // Check if the clicked element is the modal itself and not its child elements
-            if (event.target === this) {
-                modal.style.display = "none";
-
-                // Optionally reset the zoomable image src if needed
-                var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
-                zoomableSwiperImage.src = '';
-            }
-        });
-
-    </script>
-
+    <script src="./js/swiper-bundle.min.js"> </script>
+    <script src="./js/zoom-thumbs-logc.js"> </script>
 </body>
-
 </html>
