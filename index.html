@@ -59,7 +59,7 @@
         /* Safari and Chrome */
     }
 
-    #zoomable-swiper-container {
+    #zoomable-swiper-container .swiper-wrapper {
         margin-top: 100px;
 
     }
@@ -223,9 +223,9 @@
             var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
             zoomableSwiperImage.src = src;
 
-            document.querySelectorAll('.thumbs-swiper .swiper-slide').forEach(function(slide) {
-        slide.classList.remove('thumb-swiper-slide-active');
-    });
+            document.querySelectorAll('.thumbs-swiper .swiper-slide').forEach(function (slide) {
+                slide.classList.remove('thumb-swiper-slide-active');
+            });
 
             // Add 'thumb-swiper-slide-active' class to the parent of the clicked image
             if (clickedElement.parentElement) {
@@ -233,6 +233,17 @@
             }
 
         }
+
+        document.getElementById("myModal").addEventListener("click", function (event) {
+            // Check if the clicked element is the modal itself and not its child elements
+            if (event.target === this) {
+                modal.style.display = "none";
+
+                // Optionally reset the zoomable image src if needed
+                var zoomableSwiperImage = document.querySelectorAll('.cover-images-slider1 .swiper-slide img')[0];
+                zoomableSwiperImage.src = '';
+            }
+        });
 
     </script>
 
