@@ -37,19 +37,21 @@
         background-color: rgba(0, 0, 0, 0.9);
     }
 
-    .thumbs-swiper::-webkit-scrollbar {
-        display: none;
-    }
-
-
     .product-images-zoomable-swiper .swiper-wrapper {
         margin-top: 25%;
-        position: fixed;
+        position: sticky;
     }
+
+    
+
 
     .thumbs-swiper {
         width: 100%;
         position: fixed;
+    }
+
+    .thumbs-swiper::-webkit-scrollbar {
+        display: none;
     }
 
     .close {
@@ -61,10 +63,6 @@
         font-weight: bold;
         cursor: pointer;
         z-index: 400;
-    }
-
-    .swiper-pagination {
-        margin-top: 20px !important;
     }
 
     .product-images-swiper .swiper-pagination-bullet {
