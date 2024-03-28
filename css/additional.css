@@ -41,8 +41,10 @@
         display: none;
     }
 
+
     .product-images-zoomable-swiper .swiper-wrapper {
         margin-top: 25%;
+        position: fixed;
     }
 
     .thumbs-swiper {
