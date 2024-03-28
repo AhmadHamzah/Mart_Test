@@ -45,6 +45,8 @@ function changeMainImage(src, clickedElement) {
     var galleryTop1 = new Swiper(".product-images-zoomable-swiper", {
         zoom: true,
         allowTouchMove: false,
+        simulateTouch: false, // Disable mouse "touch" simulation
+        noSwiping: true, //
     });
     
     galleryTop1.zoom.out();
