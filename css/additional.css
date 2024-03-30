@@ -37,8 +37,11 @@
         background-color: rgba(0, 0, 0, 0.9);
     }
 
-    .product-images-zoomable-swiper .swiper-wrapper {
+    .product-images-zoomable-swiper {
         margin-top: 25%;
+    }
+    
+    .product-images-zoomable-swiper .swiper-wrapper {
         position: sticky;
     }
 
