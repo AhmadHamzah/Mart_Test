@@ -42,9 +42,6 @@
         position: sticky;
     }
 
-    
-
-
     .thumbs-swiper {
         width: 100%;
         position: fixed;
@@ -63,6 +60,14 @@
         font-weight: bold;
         cursor: pointer;
         z-index: 400;
+    }
+
+    .product-images-swiper {
+        width: 100%;
+    }
+
+    .product-images-swiper .swiper-slide img {
+        width: 100%;
     }
 
     .product-images-swiper .swiper-pagination-bullet {
