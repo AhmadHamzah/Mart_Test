@@ -52,7 +52,6 @@
 .thumbs-swiper {
     overflow-x: scroll;
     white-space: nowrap;
-    margin-top: 10px;
 }
 
 .thumbs-swiper .swiper-slide {
