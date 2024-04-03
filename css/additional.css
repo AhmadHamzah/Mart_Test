@@ -20,6 +20,7 @@
         white-space: nowrap;
         gap: 2vw;
         flex-direction: row-reverse;
+        justify-content: flex-start;
     }
 
     #product-images-zoomable-swiper-container {
