@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Talis Heavy W00 Heavy";
+    src: url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.eot");
+    src: url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cc7646983aa73bfa5f96086eb19068a8.svg#Talis Heavy W00 Heavy")format("svg");
+}
+
 .product-images-swiper {
     width: 100%;
     direction: unset !important;
@@ -89,4 +99,358 @@
     z-index: 400;
 }
 
+.swiper-pagination.swiper-pagination-custom {
+    color: white !important;
+    font-size: 15px !important;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    width: 20px;
+    left:0;
+    right:0;
+  
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #aaa;
+    padding: 1px 15px;
+    border-radius: 14px;
+}
 
+/* header start */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    direction: rtl; /* For right-to-left languages */
+  }
+  
+  .header .title {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+  }
+  
+  .header .icon {
+    width: 24px; /* Assuming you want fixed dimensions for icons */
+    height: 24px;
+  }
+  
+  /* Adjust path to your icons */
+
+  .arrow-icon {
+    background-size: cover;
+    margin-top: -5px;
+    margin-bottom: 5px;
+
+  }
+
+/* header end */
+
+/* product price start */
+
+.product-price {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 3px;
+    font-family: Arial, sans-serif;
+  }
+
+  .rating {
+    color: #ffcc00; /* Color for the star */
+    width: 170px;
+  }
+
+  .rating i {
+    margin-right: 5px;
+  }
+
+  .reviews {
+    font-size: 0.9rem;
+    color: grey;
+  }
+
+  .discount, .price {
+    margin-left: 5px;
+    color: white;
+  }
+
+  .discount {
+    background-color: #FF7F7F;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 300;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+}
+  
+  .price {
+    color: red;
+    width: 140px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  .original-price {
+    text-decoration: line-through; /* Strikethrough effect for the original price */
+    color: grey;
+    font-size: 20px;
+    width: 100px;
+    margin-right: -30px;
+  }
+
+  .currency {
+    font-size: 1.2rem;
+  }
+
+  .average-rating {
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+/* product price end */
+
+.product-name {
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: right;
+    padding: 4px 10px;
+}
+
+.product-name .product-name-english {
+    color: #797D80;
+    margin-top: 7px;
+
+}
+
+
+.copy-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Tajawal", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+
+    float: right;
+    text-align: right;
+    justify-content: flex-end;
+    padding: 0 5px;
+  }
+
+  .copy-text-button {
+    margin-right: 10px;
+        text-align: center;
+  }
+
+  .copy-text {
+    margin-right: 10px;
+  }
+  .copy-icon {
+    cursor: pointer;
+    padding: 5px;
+    color: #0000ff;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .size-selector {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 4px;
+    background-color: #f4f4f4;
+    flex-wrap: wrap;
+
+  }
+
+  .size-selector button {
+    padding: 5px 15px;
+    background-color: #fff;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+
+  .size-selector button:hover {
+    border-color: #000;
+  }
+
+  .size-selector button.active {
+    border-color: #000;
+    background-color: #ddd;
+  }
+
+  .title {
+    text-align: right;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+
+.size-selector-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right:10px;
+    font-family: "Tajawal", sans-serif !important;
+    font-size: 17px;
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    width: 100%;
+
+  }
+
+  .quantity-selector-label{
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 10px;
+    font-family: "Tajawal", sans-serif;
+    font-size: 17px;
+  }
+
+  .quantity-selector input {
+    text-align: center;
+    height: 30px;
+    width: 15px;
+    border: none;
+
+  }
+
+  .quantity-selector button {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 20px;
+  }
+
+  .quantity-selector button:active {
+    background-color: #e0e0e0;
+  }
+  
+  .similar-products {
+    margin-top: 10px;
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    float: right;
+}
+
+.similar-products  .product-image {
+    width: 20%;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    float: right !important;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.similar-products img {
+    width: 100%;
+}
+
+.info-section {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: "Tajawal", sans-serif;
+    font-size: 17px;
+  }
+
+  .info-icon {
+    height: 40px;
+    width: 40px;
+    background-color: #90ee90; /* Light green background */
+    border-radius: 50%;
+    display: flex;
+    margin-right: -5px;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+  }
+
+  .info-text {
+    flex: 1;
+    text-align: right;
+  }
+
+  .info-section strong {
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 7px;
+    
+  }
+
+  .info-text span {
+    font-size: 16px !important;
+  }
+
+
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-around;
+    padding: 3px 0;
+    box-sizing: border-box;
+  }
+
+  .nav-button {
+    text-align: center;
+    flex-grow: 1;
+    font-family: "Tajawal", sans-serif;
+    
+  }
+
+  .nav-button.red {
+    background-color: #ED2D37;
+    border-radius: 12px;
+    color: white;
+    padding: 7px 25px;
+  }
+
+  .nav-button.red span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  /* Placeholder for icons */
+  .icon-placeholder {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #ddd;
+  }
+
+  /* Utility class for the text inside the buttons */
+  .button-text {
+    display: block;
+  }

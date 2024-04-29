@@ -1,0 +1,269 @@
+* {
+    font-family: "Tajawal", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header start */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 0 10px;
+    direction: rtl;
+}
+
+.page-header .header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    font-weight: 400;
+    width: 80%;
+}
+
+.header-icon {
+    width: 7%;
+}
+
+/* header end */
+
+/* swiper start */
+
+.product-images-swiper {
+    width: 100%;
+    direction: unset !important;
+}
+
+
+.product-images-swiper .swiper-wrapper {
+    direction: unset !important;
+}
+
+.product-images-swiper .swiper-slide img {
+    width: 100%;
+    max-height: 100vw;
+}
+
+.product-images-swiper .swiper-pagination-bullet {
+    color: #fff !important;
+    width: 8px;
+    height: 8px;
+}
+
+.product-images-swiper .swiper-pagination-bullet-active {
+    background: #e62e04 !important;
+}
+
+#product-images-zoomable-swiper-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.product-images-zoomable-swiper {
+    margin-top: 25%;
+}
+
+.product-images-zoomable-swiper .swiper-slide img {
+    width: 100vw;
+    max-height: 100vw;
+}
+
+.product-images-zoomable-swiper .swiper-wrapper {
+    position: sticky;
+}
+
+.thumbs-swiper {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.thumbs-swiper .swiper-slide {
+    width: 20%;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    float: none !important;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.thumbs-swiper .swiper-slide img {
+    width: 100%;
+}
+
+.thumb-swiper-slide-active img {
+    border: solid 3px #fff;
+}
+
+.thumb-swiper-slide-active {
+    width: 22% !important;
+    margin-right: 2vw !important;
+    margin-top: 4px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #f1f1f1;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 400;
+}
+
+.swiper-pagination.swiper-pagination-custom {
+    color: #fff !important;
+    font-size: 17px !important;
+    font-weight: 300;
+    width: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* swiper end */
+
+/* product price start */
+
+.product-price-and-rating {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 3px 15px;
+}
+
+.product-rating {
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-right: 10px;
+}
+
+.product-reviews-count {
+    color: grey;
+}
+
+.price-discount {
+    background-color: #FFdFdF;
+    color: #BD3C43;
+    padding: 0 3px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+}
+
+.product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+}
+
+.product-current-price {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.product-original-price {
+    text-decoration: line-through;
+    /* Strikethrough effect for the original price */
+    color: grey;
+    font-size: 20px;
+}
+
+.currency {
+    font-size: 1.2rem;
+}
+
+.average-rating {
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+/* product price end */
+
+/* product name start */
+
+.product-name-and-id {
+    padding: 5px 15px;
+    position: relative;
+}
+
+.product-name {
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: right; 
+    float: right;
+}
+
+.product-name .product-name-english {
+    color: #797D80;
+    margin-top: 7px;
+}
+
+.product-name-english, .product-name-arabic {
+    padding-left: 25px;
+}
+
+.copy-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    float: right;
+    text-align: right;
+    justify-content: flex-end;
+    padding: 0 5px;
+}
+
+.copy-text-button {
+    margin-right: 10px;
+    text-align: center;
+}
+
+.copy-text {
+    margin-right: 10px;
+}
+
+.copy-icon {
+    cursor: pointer;
+    padding: 5px;
+    color: #0000ff;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.product-share-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+/* product name end */

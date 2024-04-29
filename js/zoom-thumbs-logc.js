@@ -1,9 +1,13 @@
 var productImagesSwiper = new Swiper(".product-images-swiper", {
-    loop: false,
+    slidesPerView: 1,
     pagination: {
-        el: ".swiper-pagination",
-    },
-    slidesPerView: "auto",
+        el: '.swiper-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + '/' + total;
+        }
+      }
+
 });
 
 
@@ -67,3 +71,37 @@ function changeZoomableSwiperContainerImageSrc(src) {
     zoomableSwiperImage.src = src
 }
 
+function copyToClipboard() {
+    var copyText = document.getElementById("copyText").innerText;
+    var textArea = document.createElement("textarea");
+    textArea.value = copyText;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("Copy");
+    textArea.remove();
+  }
+
+
+document.querySelectorAll('.size-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+
+  function increment() {
+    var value = parseInt(document.getElementById('quantity').value, 10);
+    value = isNaN(value) ? 1 : value;
+    value++;
+    document.getElementById('quantity').value = value;
+  }
+
+  function decrement() {
+    var value = parseInt(document.getElementById('quantity').value, 10);
+    value = isNaN(value) ? 1 : value;
+    value < 2 ? value = 1 : value--;
+    document.getElementById('quantity').value = value;
+  }
+
+  
