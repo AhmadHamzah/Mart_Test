@@ -1,30 +1,30 @@
-document.querySelector('.info-section').addEventListener('click', function() {
+// Open popup when clicking on the info-section
+document.querySelector('.info-section').addEventListener('click', function(event) {
+    event.stopPropagation();  // Prevent this click from propagating to the body
     document.getElementById('popup').classList.add('active');
 });
 
-document.getElementById('popup').addEventListener('touchstart', handleTouchStart, false);        
-document.getElementById('popup').addEventListener('touchmove', handleTouchMove, false);
+document.querySelector('.info-section-two').addEventListener('click', function(event) {
+    event.stopPropagation();  // Prevent this click from propagating to the body
+    document.getElementById('popup').classList.add('active');
+});
 
-var yDown = null; 
 
-function handleTouchStart(evt) {
-    const firstTouch = evt.touches[0];                                      
-    yDown = firstTouch.clientY;                                      
-};                                                
-
-function handleTouchMove(evt) {
-    if (!yDown) {
-        return;
+// Add event listener to the body to close the popup
+document.body.addEventListener('click', function(event) {
+    let popup = document.getElementById('popup');
+    if (popup.classList.contains('active')) {
+        popup.classList.remove('active');
     }
+});
 
-    var yUp = evt.touches[0].clientY;
-    var yDiff = yDown - yUp;
+// Stop propagation on the popup itself to prevent the body click event from closing it when interacting with the popup
+document.getElementById('popup').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
 
-    if (yDiff > 0) {
-        /* Swipe Down */
-        document.getElementById('popup').classList.remove('active');
-    }
-
-    /* Reset values */
-    yDown = null;                                             
-};
+// Close button specifically stops propagation and closes the popup
+document.querySelector('.close-btn').addEventListener('click', function(event) {
+    event.stopPropagation();
+    document.getElementById('popup').classList.remove('active');
+});

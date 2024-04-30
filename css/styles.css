@@ -545,8 +545,6 @@
 
 /* popup start */
 .info-section {
-    padding: 20px;
-    border: 1px solid #ccc;
     cursor: pointer;
 }
 
@@ -556,7 +554,7 @@
     bottom: 0;
     width: 100%;
     height: 0;
-    background: rgba(0,0,0,0.8);
+    background: #eee;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     z-index: 1000;
@@ -565,7 +563,7 @@
 .popup-content {
     color: white;
     padding: 20px;
-    height: 60vh; /* Assuming popup fills 60% of the viewport height */
+    height: 50vh; /* Assuming popup fills 60% of the viewport height */
 }
 
 /* Hidden state */
@@ -575,7 +573,23 @@
 
 /* Active state */
 .popup.active {
-    height: 79vh; /* Adjust as per requirement */
+    height: 50vh; /* Adjust as per requirement */
 }
 
+.close-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
+    width: 40px;
+    background: transparent;
+
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.close-btn img{
+width: 100%;
+}
 /* popup end */
