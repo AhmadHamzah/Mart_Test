@@ -593,3 +593,69 @@
 width: 100%;
 }
 /* popup end */
+
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-around;
+    padding: 3px 0;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .bottom-navbar img {
+    margin-bottom: -10px;
+  }
+
+  .nav-button {
+    text-align: center;
+    height: 7vh;
+
+    
+  }
+
+  .nav-button.red {
+    background-color: #ED2D37;
+    border-radius: 12px;
+    height: 6vh;
+    width: 25vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+  
+  }
+
+  .nav-button.red img {
+margin-bottom: 3px;
+  
+  }
+
+
+  .nav-button.red span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  /* Placeholder for icons */
+  .icon-placeholder {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #ddd;
+
+  }
+
+  /* Utility class for the text inside the buttons */
+  .button-text {
+    display: block;
+    font-size: 14px !important;
+  }
