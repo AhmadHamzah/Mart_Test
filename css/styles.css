@@ -506,6 +506,8 @@
 
 .info-section-header-text {
     display: flex;
+    align-items: center;
+
 }
 
 .info-section-header strong {
