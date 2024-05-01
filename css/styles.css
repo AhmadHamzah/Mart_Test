@@ -710,7 +710,7 @@
 .share-popup-content {
     color: gray;
     padding: 20px;
-    height: 40vh;
+    height: 30vh;
     font-size: 14px;
     text-align: right; 
 }
@@ -727,7 +727,7 @@
 }
 
 .share-popup.active {
-    height: 40vh;
+    height: 30vh;
 }
 
 .share-popup-close-btn {
