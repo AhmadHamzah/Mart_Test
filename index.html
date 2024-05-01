@@ -98,12 +98,13 @@
         <div class="price-discount">نسبة التوفير ٥٠</div>
         <div class="product-price">
             <div class="product-original-price">
-                <spn> <img width="15" height="15" src="https://img.icons8.com/material-outlined/24/shekel.png"
-                        alt="shekel" />80.0</span>
+                <span> <img width="15" height="15" src="https://img.icons8.com/material-outlined/24/shekel.png"
+                        alt="shekel" />800.0</span>
             </div>
             <div class="product-current-price">
-                <spn> <img width="15" height="15" src="https://img.icons8.com/material-outlined/24/shekel.png"
-                        alt="shekel" />49.9</span>
+                <span> <img width="15" height="15" src="https://img.icons8.com/material-outlined/24/shekel.png"
+                        alt="shekel" />449.9
+                    </span>
             </div>
         </div>
     </div>
@@ -170,59 +171,65 @@
         <div class="product-image"><img src="./imgs/product_four.jpg" alt=""></div>
     </div>
 
-    <div class="info-section">
-        <div><img src="./imgs/icon_one.png" alt=""></div>
 
-        <div class="info-text">
-            <strong>وصف المنتج</strong>
 
-            <span>&bullet; بولستير</span>
-            <span>&bullet; مبطنة فرو</span>
-            <span>&bullet; ستر</span>
+    <div class="info-sections">
+        <div class="info-section">
+            <div><img src="./imgs/icon_one.png" alt=""></div>
+    
+            <div class="info-text">
+                <strong>وصف المنتج</strong>
+    
+                <span>&bullet; بولستير</span>
+                <span>&bullet; مبطنة فرو</span>
+                <span>&bullet; ستر</span>
+            </div>
+            <img height="25" width="30" class="arrow-icon" src="./imgs/arrow-two-icon.png" alt="">
+    
         </div>
-        <img height="25" width="30" class="arrow-icon" src="./imgs/arrow-two-icon.png" alt="">
-
+    
+        <div class="info-section-two">
+            <div class="info-section-header">
+                <strong>سياسات الشركة</strong>
+    
+                <div><img src="./imgs/icon_two.png" alt=""></div>
+            </div>
+    
+            <div class="policy-info-text">
+                <ul>
+                    <li>&bullet; الدفع نقدا عند الاستلام</li>
+                    <li>&bullet; سياسة الارجاع والتبديل</li>
+                    <li>&bullet; مدة التوصيل: 3 أيام</li>
+                    <li>&bullet; لطلب المنتج</li>
+                </ul>
+    
+            </div>
+            <img height="25" width="30" class="arrow-icon" src="./imgs/arrow-two-icon.png" alt="">
+    
+        </div>
+    
+        <div class="info-section-two">
+            <div class="info-section-header">
+                <strong>رسوم التوصيل</strong>
+    
+                <div><img src="./imgs/icon_three.png" alt=""></div>
+            </div>
+    
+            <div class="delivery-info-text">
+                <ul>
+                    <li>&bullet; الضفة الغربية: 10 شيكل توصيل مجاني للطلبات فوق 150 </li>
+                    <li>&bullet; داخل القدس: 20 شيكل</li>
+                    <li>&bullet; مناطق 48: 35 شيكل</li>
+                </ul>
+    
+    
+            </div>
+            <img height="25" width="30" class="arrow-icon" src="./imgs/arrow-two-icon.png" alt="">
+    
+        </div> 
+        
     </div>
 
-    <div class="info-section-two">
-        <div class="info-section-header">
-            <strong>سياسات الشركة</strong>
-
-            <div><img src="./imgs/icon_two.png" alt=""></div>
-        </div>
-
-        <div class="policy-info-text">
-            <ul>
-                <li>&bullet; الدفع نقدا عند الاستلام</li>
-                <li>&bullet; سياسة الارجاع والتبديل</li>
-                <li>&bullet; مدة التوصيل: 3 أيام</li>
-                <li>&bullet; لطلب المنتج</li>
-            </ul>
-
-        </div>
-        <img height="25" width="30" class="arrow-icon" src="./imgs/arrow-two-icon.png" alt="">
-
-    </div>
-
-    <div class="info-section-two">
-        <div class="info-section-header">
-            <strong>رسوم التوصيل</strong>
-
-            <div><img src="./imgs/icon_three.png" alt=""></div>
-        </div>
-
-        <div class="delivery-info-text">
-            <ul>
-                <li>&bullet; الضفة الغربية: 10 شيكل توصيل مجاني للطلبات فوق 150 </li>
-                <li>&bullet; داخل القدس: 20 شيكل</li>
-                <li>&bullet; مناطق 48: 35 شيكل</li>
-            </ul>
-
-
-        </div>
-        <img height="25" width="30" class="arrow-icon" src="./imgs/arrow-two-icon.png" alt="">
-
-    </div> 
 
     <div class="bottom-navbar">
         <div class="nav-button">
@@ -241,11 +248,22 @@
         </div>
       </div>
 
-
+      <div id="overlay" class="overlay"></div> <!-- Overlay -->
 
     <div class="popup" id="popup">
         <div class="popup-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+            <div class="popup-title sub-section-title">سياسة الارجاع والتبديل في مارت</div>
+            <div>&bullet; يرفع طلب الارجاع من خلال خدمة الشات المباشر الظاهر اسفل شاشة الموقع.</div>
+            <div>&bullet; لا يتم قبول طلب الارجاع في حال اتلاف الزبون لكرتونة المنتج أو غلافه.</div>
+            <div>&bullet; يجب ان يكون المنتج المرتجع (الذي يراد إرجاعه) كاملا وغير منتقص وغير مستعمل.</div>
+            <div>&bullet; رسوم الترجيع في حال عدم وجود اي خلل في المنتج 20 شيقل في الضفة الغربية والقدس و 50 شيكل لمناطق 48.</div>
+            <div>&bullet; يتم معالجة طلب الارجاع خلال مدة 5-7 ايام عمل رسمي.</div>
+            <div>&bullet; يحق لموظف التوصيل فحص المنتج المرتجع قبل استلامه من الزبون.</div>
+            <div>&bullet; يحق لموظف التوصيل رفض استلام المنتج الراجع في حال تسبب الزبون بخلل في المنتج بسبب سوء الاستعمال.</div>
+            <div>&bullet; يحق للشركة رفض طلب الارجاع في حال مخالفته سياسة الارجاع.</div>
+            <div>&bullet; الارجاع متاح لكل المنتجات المتوفرة في الموقع باستثناء العطور و الملابس الداخلية و الالكترونيات كالهواتف واللابتوبات.</div>
+            
+            
             <button class="close-btn"><img src="./imgs/bottom-arrow.png" alt=""></button>
         </div>
     </div>
