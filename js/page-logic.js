@@ -77,7 +77,7 @@ document.getElementById('share-popup').addEventListener('click', function(event)
     event.stopPropagation();
 });
 
-document.querySelector('.share-close-btn').addEventListener('click', function(event) {
+document.querySelector('.share-popup-close-btn').addEventListener('click', function(event) {
     event.stopPropagation();
     toggleSharePopup();
 });
