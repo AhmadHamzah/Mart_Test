@@ -446,6 +446,7 @@
     margin-bottom: 5px;
     margin-top: 5px;
     background: #fff !important;
+    align-items: center;
 }
 
 .info-section-two {
@@ -482,16 +483,15 @@
 .info-text span {
     margin-right: 3px;
     font-size: 14px !important;
-
 }
-
+/* 
 .arrow-icon {
     position: absolute;
     left: 0;
     top: 0;
-    margin-top: 2px;
+    margin-top: 10px;
     margin-left: 20px;
-}
+} */
 
 .info-section ul {
     width: 100%;
@@ -499,8 +499,13 @@
 
 .info-section-header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 0 10px;
+    align-items: center;
+}
+
+.info-section-header-text {
+    display: flex;
 }
 
 .info-section-header strong {
