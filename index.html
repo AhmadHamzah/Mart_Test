@@ -99,11 +99,11 @@
         <div class="product-price">
             <div class="product-original-price">
                 <span> <img width="15" height="15" src="https://img.icons8.com/material-outlined/24/shekel.png"
-                        alt="shekel" />800.0</span>
+                        alt="shekel" />80.0</span>
             </div>
             <div class="product-current-price">
                 <span> <img width="15" height="15" src="https://img.icons8.com/material-outlined/24/shekel.png"
-                        alt="shekel" />449.9
+                        alt="shekel" />49.9
                     </span>
             </div>
         </div>
@@ -114,20 +114,44 @@
             <div class="product-name-arabic">حذاء سكيتشرز جو ووك ماكس - أوتيس للرجال لون أسود</div>
             <div class="product-name-english">Skechers Men’s GOwalk Max - Oits Shoes</div>
             <img class="product-share-icon" width="32" height="32"
-                src="https://img.icons8.com/puffy/32/share-rounded.png" alt="share-rounded" />
+                 src="https://img.icons8.com/puffy/32/share-rounded.png" alt="share-rounded" />
         </div>
-
+    
         <div class="copy-container">
             <div class="copy-icon" onclick="copyToClipboard()">
-                <img width="30" height="30" src="./imgs/copy-icon.png" alt="copy--v1" /> <span
-                    class="copy-text-button">نسخ</span>
+                <img width="30" height="30" src="./imgs/copy-icon.png" alt="copy--v1" />
+                <span class="copy-text-button">نسخ</span>
             </div>
-            <div class="copy-text" id="copyText">
-                98721648548
-            </div>
+            <div class="copy-text" id="copyText">98721648548</div>
             <div>رقم المنتج</div>
         </div>
     </div>
+    
+    <!-- Popup -->
+
+    <div id="share-overlay" class="share-overlay"></div> <!-- Overlay -->
+
+
+    <div class="share-popup" id="share-popup">
+        <div class="share-popup-content">
+            <div class="sub-section-title">مشاركة مع الاصدقاء</div>
+            <div class="icons-container">
+                <div class="icon"><img src="./imgs/messenger-icon.webp" alt=""> <span>Messenger</span></div>
+                <div class="icon"><img src="./imgs/messenger-icon.webp" alt=""> <span>Messenger</span></div>
+                <div class="icon"><img src="./imgs/messenger-icon.webp" alt=""> <span>Messenger</span></div>
+                <div class="icon"><img src="./imgs/messenger-icon.webp" alt=""> <span>Messenger</span></div>
+                <div class="icon"><img src="./imgs/messenger-icon.webp" alt=""> <span>Messenger</span></div>
+                <div class="icon"><img src="./imgs/messenger-icon.webp" alt=""> <span>Messenger</span></div>
+
+
+         
+            </div>
+            
+            <button class="share-popup-close-btn">X</button>
+        </div>
+    </div>
+
+
 
     <div class="product-colors">
         <div class="product-colors-title sub-section-title">اللون</div>
@@ -262,7 +286,6 @@
             <div>&bullet; يحق لموظف التوصيل رفض استلام المنتج الراجع في حال تسبب الزبون بخلل في المنتج بسبب سوء الاستعمال.</div>
             <div>&bullet; يحق للشركة رفض طلب الارجاع في حال مخالفته سياسة الارجاع.</div>
             <div>&bullet; الارجاع متاح لكل المنتجات المتوفرة في الموقع باستثناء العطور و الملابس الداخلية و الالكترونيات كالهواتف واللابتوبات.</div>
-            
             
             <button class="close-btn"><img src="./imgs/bottom-arrow.png" alt=""></button>
         </div>

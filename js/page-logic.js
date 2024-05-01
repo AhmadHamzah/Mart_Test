@@ -40,3 +40,46 @@ document.querySelector('.close-btn').addEventListener('click', function(event) {
     event.stopPropagation();
     togglePopup();
 });
+
+
+
+
+
+let isSharePopupOpen = false;
+
+function toggleSharePopup() {
+    let sharePopup = document.getElementById('share-popup');
+    let overlay = document.getElementById('share-overlay');
+    
+    if (!isSharePopupOpen) {
+        sharePopup.classList.add('active');
+        overlay.classList.add('active'); 
+        isSharePopupOpen = true;
+    } else {
+        sharePopup.classList.remove('active');
+        overlay.classList.remove('active'); 
+        isSharePopupOpen = false;
+    }
+}
+
+
+document.querySelector('.product-share-icon').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent this click from propagating to the body
+    toggleSharePopup();
+});
+
+
+document.getElementById('share-overlay').addEventListener('click', function() {
+    toggleSharePopup();
+});
+
+document.getElementById('share-popup').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+document.querySelector('.share-close-btn').addEventListener('click', function(event) {
+    event.stopPropagation();
+    toggleSharePopup();
+});
+
+
