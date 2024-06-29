@@ -2,14 +2,10 @@ var productImagesSwiper = new Swiper(".product-images-swiper", {
     slidesPerView: 1,
     pagination: {
         el: '.swiper-pagination',
-        type: 'custom',
-        renderCustom: function (swiper, current, total) {
-          return current + '/' + total;
-        }
+     
       }
 
 });
-
 
 var zoomableSwiperContainer = document.getElementById("product-images-zoomable-swiper-container");
 

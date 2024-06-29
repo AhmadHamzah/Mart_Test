@@ -49,12 +49,18 @@
 
 .product-images-swiper .swiper-pagination-bullet {
     color: #fff !important;
-    width: 8px;
-    height: 8px;
+    border-radius: 0 !important;
+    width: 15% !important;
+    height: 2px !important;
+}
+
+.product-images-swiper .swiper-pagination-bullets {
+    display: flex;
+    justify-content: space-around;
 }
 
 .product-images-swiper .swiper-pagination-bullet-active {
-    background: #e62e04 !important;
+    background: #000 !important;
 }
 
 #product-images-zoomable-swiper-container {
