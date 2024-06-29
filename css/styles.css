@@ -697,6 +697,7 @@
 
 .info-sections {
     background-color: lightgray;
+    margin-bottom: 10px;
 }
 
 /* share popup start */
@@ -796,3 +797,139 @@ overflow: hidden;
 
 
 /* share popup end */
+
+.was-bought-with-slider-container {
+    margin-bottom: 50px;
+}
+
+.was-bought-with-slider-container .was-bought-with-title {
+    padding-right: 15px;
+}
+
+.was-bought-with-slider {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.was-bought-with-slide {
+    display: inline-flex;
+    flex-direction: column;
+    width: 38%;
+    cursor: pointer;
+    /* display: inline-block; */
+    position: relative;
+    float: none !important;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.was-bought-with-slide img {
+    width: 100%;
+}
+
+.was-bought-with-product-price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.was-bought-with-product-price img {
+    width: 10px;
+}
+
+.was-bought-with-original-product-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.was-bought-with-current-product-price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.was-bought-with-product-name {
+    font-size: 13px;
+    color: gray;
+    text-align: right;
+}
+
+.you-might-also-like-grid-container {
+    margin-bottom: 100px;
+}
+
+.you-might-also-like-grid {
+    margin-top: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.you-might-also-like-title {
+    padding-right: 10px;
+}
+
+.you-might-also-like-categories {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+.you-might-also-like-category {
+    font-size: 14px;
+    color: gray;
+}
+
+.you-might-also-like-category.selected {
+    font-weight: bold;
+    color: black;
+}
+
+.you-might-also-like-card {
+    display: inline-flex;
+    width: 46%;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.you-might-also-like-product-img {
+    width: 100%;
+
+}
+
+.you-might-also-like-product-price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.you-might-also-like-product-price img {
+    width: 10px;
+}
+
+.you-might-also-like-original-product-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.you-might-also-like-current-product-price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.you-might-also-like-product-name {
+    font-size: 13px;
+    color: gray;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
