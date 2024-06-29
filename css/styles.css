@@ -939,3 +939,10 @@ justify-content: space-evenly;
     white-space: nowrap;
 }
 
+.product-images-swiper .product-share-icon {
+    position: absolute;
+    bottom: 0;
+    top: unset;
+    margin-bottom: 25px;
+}
+
